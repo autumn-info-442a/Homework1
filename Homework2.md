@@ -9,13 +9,23 @@ In the United States, 60% of parents use YouTube as a tool for babysitting their
 ## Solution
 We are building a chrome extension where children watching Youtube Kids play educational mini-games in between videos. Games will be written math problems (addition, subtraction, multiplication, division) where the user will select an answer by clicking on it. Parents/guardians can control the frequency of mini-game occurrances (as a pop-up displayed directly after a video ends) by specifying controls in the iCare settings. If a user selects the correct answer to a question, the pop-up will display a congratulations message with a text button to close and return to Youtube Kids. Otherwise the pop-up will display a try-again message with a text button to attempt the same mini-game until they answer correctly.
 
-The interface behaves as a typical chrome extension, found in the extension bar. The pop-up screen displays after the user clicks on the iCare extension button.
+The interface behaves as a typical chrome extension, found in the extension toolbar. The pop-up screen displays after the user clicks on the iCare extension button.
 <p align="center">
   <img width="460" height="200" src="https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/HW2/wireframeV2_a.jpg">
 </p>
 
-If a parent clicks on the extension icon, a welcome screen opens in a pop-up with a button to select settings.
-Clicking on settings button changes content of the popup to the settings
+Clicking on settings button changes content of the popup to the settings page. In settings there are:
+* **3 Dropdowns** 
+  - Child Age: 7-12+ (int)
+  - Grade Level: (K, 1, 2, 3, ... , 7+) (string)
+  - Reactive Dropdown: Based on radio buttons (see below)
+* **2 Radio Buttons**
+  - Total Videos Watched:
+    If selected, Reactive Dropdown will display 1-5 (int)
+  - Total Watch Time (Minutes)
+    Else, Total Watch Time is selected and displays 5-60 (int) only multiples of 5 (starting at 5, 10, 15, ...)
+    
+ * **When Save button is clicked settings data for all 4 user inputs (3 Dropwdowns, 1 Radio Button selection) will be saved locally**
 <p align="center">
   <img width="460" height="300" src="https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/HW2/wireframeV2_b.JPG">
 </p>
