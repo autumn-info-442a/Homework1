@@ -7,17 +7,14 @@ _INFO 442A: Samuel Christ, Jimmy Hua, Yichi Zhang, Spencer Knapp_
 In the United States, 60% of parents use YouTube as a tool for babysitting their children (ages 7-13) on at least a biweekly basis. This exposure is often unregulated, which poses risks of “binging” on content for extended periods of time. Research suggests that habitual consumption of YouTube content may lead to addiction and other psychological issues. YouTube Kids is an existing solution to some of these risks by removing comments and restricting videos shown. This approach to YouTube addiction is not effective because YouTube has a financial stake in designing its algorithm to promote high watch times to earn more revenue from ads. Parents have the option to remove all ads by purchasing YouTube Premium, which still fails to directly address the issues of YouTube addiction and self-regulation of watch time. In light of these risks associated with YouTube, what balance of parent intervention and platform moderation best promotes child safety and self regulation?  
 
 ## Solution
-We are building a chrome extension where children watching Youtube Kids play educational mini-games in between videos.
-- parents control frequency of mini-game pop-ups in settings
-- mini games are math based (multiplication, subtraction, division, addition)
+We are building a chrome extension where children watching Youtube Kids play educational mini-games in between videos. Games will be written math problems (addition, subtraction, multiplication, division) where the user will select an answer by clicking on it. Parents/guardians can control the frequency of mini-game occurrances (as a pop-up displayed directly after a video ends) by specifying controls in the iCare settings. If a user selects the correct answer to a question, the pop-up will display a congratulations message with a text button to close and return to Youtube Kids. Otherwise the pop-up will display a try-again message with a text button to attempt the same mini-game until they answer correctly.
 
 The interface behaves as a typical chrome extension, found in the extension bar. The pop-up screen displays after the user clicks on the iCare extension button.
 <p align="center">
   <img width="460" height="200" src="https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/HW2/wireframeV2_a.jpg">
 </p>
 
-Parent clicks on the extension icon
-Welcome screen opens in a popup with a button for settings
+If a parent clicks on the extension icon, a welcome screen opens in a pop-up with a button to select settings.
 Clicking on settings button changes content of the popup to the settings
 <p align="center">
   <img width="460" height="300" src="https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/HW2/wireframeV2_b.JPG">
@@ -71,6 +68,8 @@ iCare mini-game closes when user clicks on "filler" and Youtube Kids returns to 
 
 ## Final Remarks:
 English, no sound, no keyboard, chrome desktop only (responsive to window size), no accessibility options (things such as color blind support), no contact with a server (everything is saved locally), only one type of minigame
+
+For this iteration of iCare, all text will be in American English. There will be no sound, no keyboard user inputs (all user inputs will be click based), and no additional features for accessibility (i.e. color toggle for color-blind, voice controls, etc). iCare will only function on the Chrome browser as a Chrome extension (Firefox, Safari, etc not supported). All user data (settings, count of videos/day, total watch time/day) will be saved locally. 
 
 ### HowToo Comment:
 <p align="center">
