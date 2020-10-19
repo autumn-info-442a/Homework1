@@ -61,22 +61,20 @@ If user clicks on incorrect answer a try again message is displayed in the pop-u
   <img width="460" height="300" src="https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/HW2/wireframeV2_g.JPG">
 </p>
 
-This is the page displayed after the user clicks on the correct answer for the mini-game.
+Pop-up displays "Nice Work" message after the user clicks on the correct answer for the mini-game.
 
 <p align="center">
   <img width="460" height="300" src="https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/HW2/wireframeV2_h.JPG">
 </p>
 
-iCare mini-game closes when user clicks on "filler" and Youtube Kids returns to normal functionality until next game is triggered (based on parent settings).
+iCare mini-game closes when user clicks on the "Click here to keep watching Youtube" text button. Youtube Kids returns to normal functionality until next game is triggered (based on parent settings).
 <p align="center">
   <img width="460" height="300" src="https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/HW2/wireframeV2_i.JPG">
 </p>
 
 
 ## Final Remarks:
-English, no sound, no keyboard, chrome desktop only (responsive to window size), no accessibility options (things such as color blind support), no contact with a server (everything is saved locally), only one type of minigame
-
-For this iteration of iCare, all text will be in American English. There will be no sound, no keyboard user inputs (all user inputs will be click based), and no additional features for accessibility (i.e. color toggle for color-blind, voice controls, etc). iCare will only function on the Chrome browser as a Chrome extension (Firefox, Safari, etc not supported). All user data (settings, count of videos/day, total watch time/day) will be saved locally. 
+For this iteration of iCare, all text will be in American English. There will be no sound, no keyboard user inputs (all user inputs will be click based), and no additional features for accessibility (i.e. color toggle for color-blind, voice controls, etc). iCare will only function on the Chrome browser as a Chrome extension (Firefox, Safari, etc not supported). All user data (settings, count of videos/day, total watch time/day) will be saved locally. For this iteration, _Total Videos Watched_ or _Total Watch Time_ amounts will be reset every 24 hours.
 
 ### HowToo Comment:
 <p align="center">
