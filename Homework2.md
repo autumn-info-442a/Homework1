@@ -1,5 +1,5 @@
-INFO 442A
-Samuel Christ, Jimmy Hua, Yichi Zhang, Spencer Knapp
+_INFO 442A_
+_Samuel Christ, Jimmy Hua, Yichi Zhang, Spencer Knapp_
 
 # Homework 2: Design
 
@@ -75,5 +75,5 @@ English, no sound, no keyboard, chrome desktop only (responsive to window size),
 
 ### HowToo Comment:
 <p align="center">
-  <img width="460" height="200" src="https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/HW2/HowToo.JPG">
+  <img width="460" height="150" src="https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/HW2/HowToo.JPG">
 </p>
