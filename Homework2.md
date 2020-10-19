@@ -12,10 +12,46 @@ We are building a chrome extension where children watching Youtube Kids play edu
 - parents control frequency of mini-game pop-ups in settings
 - mini games are math based (multiplication, subtraction, division, addition)
 
-![Wireframe1](https://github.com/autumn-info-442a/Team-iCare/blob/HW2/Wireframe2.png)
+The interface behaves as a typical chrome extension, found in the extension bar. The pop-up screen displays after the user clicks on the iCare extension button.
+![Wireframe1](https://github.com/autumn-info-442a/Team-iCare/blob/HW2/Wireframe2_1.png)
 
-* Details (3 point). Lose 0.25 points for every interactive detail that is critical to solving the problem that is not specified. It's okay if visual details are not specified, since those can be changed easily. I want to see the core functionality of your application fully specified.
+Parent clicks on the extension icon
+Welcome screen opens in a popup with a button for settings
+Clicking on settings button changes content of the popup to the settings
+![Wireframe2](https://github.com/autumn-info-442a/Team-iCare/blob/HW2/Wireframe2_2.png)
 
-* Strategy Feedback (1 point). Write a comment on HowToo evaluating the utility of the specification refinement strategy.  Remember that the comment must not be anonymous.
+**Dropdown: child age**
+* 5-12+
+**Dropdown: grade level (k-6)**
+**Radio buttons:** 
+Based on selection pop up to the right will show:
+If total videos watched then 1-5
+If total watch times then 5-60 minutes, multiples of 5
+Clicking save closes the popup window and settings are stored locally
+Child watches a YouTube video while the extension is monitoring watch time/video count in the background set by the parent
+![Wireframe1](https://github.com/autumn-info-442a/Team-iCare/blob/HW2/Wireframe2_4.png)
 
-This section must detail every design decision necessary for engineering your solution, including every screen, every error, every algorithmic functionality, and every detail about the textual and visual content of your design (aside from content created by users). If your solution is software, a software engineer should be able to read your specification and build your solution without asking you any questions. Embed mockups of screens throughout the text of this section to visually specify your design. Because of the short timeline, it's okay if these are hand-sketched.
+Watch time/video limit is reached
+Pop up opens with a  mini game (video also cannot be played)
+A timer is set where the popup will close regardless of status of the game
+Child can click on the buttons to choose their answer
+An incorrect answer will keep them on the minigame but will allow them to keep trying until time runs out
+![Wireframe1](https://github.com/autumn-info-442a/Team-iCare/blob/HW2/Wireframe2_5.png)
+
+![Wireframe1](https://github.com/autumn-info-442a/Team-iCare/blob/HW2/Wireframe2_5-1.png)
+
+** 1-2 sentences about redirect to same game if answer is incorrect
+![Wireframe1](https://github.com/autumn-info-442a/Team-iCare/blob/HW2/Wireframe2_6-1.png)
+ 
+![Wireframe1](https://github.com/autumn-info-442a/Team-iCare/blob/HW2/Wireframe2_6.png)
+
+This is the page displayed after the mini-game question is answered correctly.
+![Wireframe1](https://github.com/autumn-info-442a/Team-iCare/blob/HW2/Wireframe2_7.png)
+
+Youtube Kids returns to normal functionality until next iCare mini-game is triggered (based on parent settings).
+![Wireframe1](https://github.com/autumn-info-442a/Team-iCare/blob/HW2/Wireframe2_8.png)
+
+## Final Remarks:
+English, no sound, no keyboard, chrome desktop only (responsive to window size), no accessibility options (things such as color blind support), no contact with a server (everything is saved locally), only one type of minigame
+
+
