@@ -43,26 +43,26 @@ Youtube Kids functions normally until either the _Total Videos Watched_ or _Tota
 </p>
 
 When user has either exceeded either _Total Videos Watched_ or _Total Watch Time_ setting (determined from Radio Button and Reactive Dropdown selections) a pop-up opens with a  mini-game (video also cannot be played).
-A timer is set where the popup will close regardless of status of the game after 5 minutes. A user can click on the buttons to choose their answer.
+A user can click on the buttons to choose their answer.
 * Text display of a math question selected from bank (dict, list, ?) of based on _Child Age_ and _Grade Level_ selections
 * 3 Answer Buttons display and are reactive to user hovering over a button and clicking on a button
+
+**A timer is set where the popup will close regardless of status of the game (if user has not clicked on an answer) after 5 minutes.**
 <p align="center">
   <img width="460" height="300" src="https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/HW2/wireframeV2_e.JPG">
+</p>
+<p align="center">
+  <img width="460" height="300" src="https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/HW2/wireframeV2_f.JPG">
 </p>
 
 If user clicks on incorrect answer a try again message is displayed in the pop-up.
 * A user clicks a text button "Click here to retry!" to restart the game.
 <p align="center">
-  <img width="460" height="300" src="https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/HW2/wireframeV2_f.JPG">
-</p>
-
-Filler text
-<p align="center">
   <img width="460" height="300" src="https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/HW2/wireframeV2_g.JPG">
 </p>
 
+This is the page displayed after the user clicks on the correct answer for the mini-game.
 
-This is the page displayed after the mini-game question is answered correctly.
 <p align="center">
   <img width="460" height="300" src="https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/HW2/wireframeV2_h.JPG">
 </p>
