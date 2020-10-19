@@ -14,7 +14,11 @@ The interface behaves as a typical chrome extension, found in the extension tool
   <img width="460" height="200" src="https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/HW2/wireframeV2_a.jpg">
 </p>
 
-Clicking on settings button changes content of the popup to the settings page. In settings there are:
+Clicking on settings button changes content of the popup to the settings page. 
+<p align="center">
+  <img width="460" height="300" src="https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/HW2/wireframeV2_b.JPG">
+</p>
+In settings there are:
 * **3 Dropdowns** 
   - Child Age: 7-12+ (int)
   - Grade Level: (K, 1, 2, 3, ... , 7+) (string)
@@ -24,20 +28,9 @@ Clicking on settings button changes content of the popup to the settings page. I
     If selected, Reactive Dropdown will display 1-5 (int)
   - Total Watch Time (Minutes)
     Else, Total Watch Time is selected and displays 5-60 (int) only multiples of 5 (starting at 5, 10, 15, ...)
-    
- * **When Save button is clicked settings data for all 4 user inputs (3 Dropwdowns, 1 Radio Button selection) will be saved locally**
-<p align="center">
-  <img width="460" height="300" src="https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/HW2/wireframeV2_b.JPG">
-</p>
-**Dropdown: child age**
-* 5-12+
-**Dropdown: grade level (k-6)**
-**Radio buttons:** 
-Based on selection pop up to the right will show:
-If total videos watched then 1-5
-If total watch times then 5-60 minutes, multiples of 5
-Clicking save closes the popup window and settings are stored locally
-Child watches a YouTube video while the extension is monitoring watch time/video count in the background set by the parent
+ 
+* **When Save button is clicked settings data for all 4 user inputs (3 Dropwdowns, 1 Radio Button selection) will be saved locally and pop-up closes**
+* Child watches a YouTube video while the extension is monitoring watch time/video count in the background set by the parent.
 <p align="center">
   <img width="460" height="300" src="https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/HW2/wireframeV2_c.jpg">
 </p>
