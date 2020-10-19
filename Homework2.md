@@ -73,7 +73,7 @@ iCare mini-game closes when user clicks on the "Click here to keep watching Yout
 </p>
 
 
-## Final Remarks:
+## Additional Notes:
 For this iteration of iCare, all text will be in American English. There will be no sound, no keyboard user inputs (all user inputs will be click based), and no additional features for accessibility (i.e. color toggle for color-blind, voice controls, etc). iCare will only function on the Chrome browser as a Chrome extension (Firefox, Safari, etc not supported). All user data (settings, count of videos/day, total watch time/day) will be saved locally. For this iteration, _Total Videos Watched_ or _Total Watch Time_ amounts will be reset every 24 hours.
 
 ### HowToo Comment:
