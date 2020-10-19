@@ -13,7 +13,9 @@ We are building a chrome extension where children watching Youtube Kids play edu
 - mini games are math based (multiplication, subtraction, division, addition)
 
 The interface behaves as a typical chrome extension, found in the extension bar. The pop-up screen displays after the user clicks on the iCare extension button.
-![Wireframe1](https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/HW2/wireframeV2_a.jpg)
+<p align="center">
+  <img width="460" height="300" src="https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/HW2/wireframeV2_a.jpg">
+</p>
 
 Parent clicks on the extension icon
 Welcome screen opens in a popup with a button for settings
