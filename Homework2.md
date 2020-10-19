@@ -32,7 +32,8 @@ In settings there are:
   - _Total Watch Time_ (Minutes):
     Else, Total Watch Time is selected and displays 5-60 (int) only multiples of 5 (starting at 5, 10, 15, ...)
  
-When Save button is clicked settings data for all 4 user inputs (3 Dropwdowns, 1 Radio Button selection) will be saved locally and pop-up closes. Child watches a YouTube video while the extension is monitoring watch time/video count in the background set by the parent.
+When Save button is clicked settings data for all 4 user inputs (3 Dropwdowns, 1 Radio Button selection) will be saved locally and pop-up closes. While user watches videos on Youtube Kids iCare extension tracks total watch time or total video count based on settings. If any settings have been specified/saved then mini-games will not display.
+
 <p align="center">
   <img width="460" height="300" src="https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/HW2/wireframeV2_c.jpg">
 </p>
@@ -42,8 +43,9 @@ Youtube Kids functions normally until either the _Total Videos Watched_ or _Tota
   <img width="460" height="300" src="https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/HW2/wireframeV2_d.JPG">
 </p>
 
-When user has either exceeded either _Total Videos Watched_ or _Total Watch Time_ setting (determined from Radio Button and Reactive Dropdown selections) a pop-up opens with a  mini-game (video also cannot be played).
-A user can click on the buttons to choose their answer.
+When user has exceeded either _Total Videos Watched_ or _Total Watch Time_ setting (check saved Radio Button and Reactive Dropdown selections) a pop-up opens with a  mini-game (pop-up blocks Youtube Kids video from playing).
+
+A user can click on the buttons to choose their answer:
 * Text display of a math question selected from bank (dict, list, ?) of based on _Child Age_ and _Grade Level_ selections
 * 3 Answer Buttons display and are reactive to user hovering over a button and clicking on a button
 
