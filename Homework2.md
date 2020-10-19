@@ -24,9 +24,9 @@ In settings there are:
   - Grade Level: (K, 1, 2, 3, ... , 7+) (string)
   - Reactive Dropdown: Based on radio buttons (see below)
 * **2 Radio Buttons**
-  - Total Videos Watched:
+  - _Total Videos Watched_:
     If selected, Reactive Dropdown will display 1-5 (int)
-  - Total Watch Time (Minutes)
+  - _Total Watch Time_ (Minutes)
     Else, Total Watch Time is selected and displays 5-60 (int) only multiples of 5 (starting at 5, 10, 15, ...)
  
 * **When Save button is clicked settings data for all 4 user inputs (3 Dropwdowns, 1 Radio Button selection) will be saved locally and pop-up closes**
@@ -34,16 +34,13 @@ In settings there are:
 <p align="center">
   <img width="460" height="300" src="https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/HW2/wireframeV2_c.jpg">
 </p>
-
-Watch time/video limit is reached
-Pop up opens with a  mini game (video also cannot be played)
-A timer is set where the popup will close regardless of status of the game
-Child can click on the buttons to choose their answer
-An incorrect answer will keep them on the minigame but will allow them to keep trying until time runs out
+Youtube Kids functions normally until either the _Total Videos Watched_ or _Total Watch Time_ setting is reached.
 <p align="center">
   <img width="460" height="300" src="https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/HW2/wireframeV2_d.JPG">
 </p>
-Filler text
+When user has either exceeded either _Total Videos Watched_ or _Total Watch Time_ setting a pop-up opens with a  mini game (video also cannot be played)
+A timer is set where the popup will close regardless of status of the game after 5 minutes. A user can click on the buttons to choose their answer.
+An incorrect answer will keep them on the minigame but will allow them to keep trying until time runs out
 <p align="center">
   <img width="460" height="300" src="https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/HW2/wireframeV2_e.JPG">
 </p>
