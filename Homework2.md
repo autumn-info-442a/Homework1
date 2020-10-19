@@ -46,7 +46,7 @@ Youtube Kids functions normally until either the _Total Videos Watched_ or _Tota
 When user has exceeded either _Total Videos Watched_ or _Total Watch Time_ setting (check saved Radio Button and Reactive Dropdown selections) a pop-up opens with a mini-game (pop-up blocks Youtube Kids video from playing).
 
 A user can click on the buttons to choose their answer:
-* Text display of a math question selected from bank (dict, list, ?) of based on _Child Age_ and _Grade Level_ selections
+* Text display of a math question selected based on _Child Age_ and _Grade Level_ selections
 * 3 Answer Buttons display and are reactive to user hovering over a button and clicking on a button
 
 **A timer is set where the popup will close regardless of status of the game (if user has not clicked on an answer) after 5 minutes.**
