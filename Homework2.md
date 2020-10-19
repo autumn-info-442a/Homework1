@@ -36,20 +36,20 @@ Pop up opens with a  mini game (video also cannot be played)
 A timer is set where the popup will close regardless of status of the game
 Child can click on the buttons to choose their answer
 An incorrect answer will keep them on the minigame but will allow them to keep trying until time runs out
-![Wireframe4](https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/HW2/wireframeV2_d.jpg)
+![Wireframe4](https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/HW2/wireframeV2_d.JPG)
 
-![Wireframe5](https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/HW2/wireframeV2_e.jpg)
+![Wireframe5](https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/HW2/wireframeV2_e.JPG)
 
 ** 1-2 sentences about redirect to same game if answer is incorrect
-![Wireframe6](https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/HW2/wireframeV2_f.jpg)
+![Wireframe6](https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/HW2/wireframeV2_f.JPG)
  
-![Wireframe7](https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/HW2/wireframeV2_g.jpg)
+![Wireframe7](https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/HW2/wireframeV2_g.JPG)
 
 This is the page displayed after the mini-game question is answered correctly.
-![Wireframe8](https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/HW2/wireframeV2_h.jpg)
+![Wireframe8](https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/HW2/wireframeV2_h.JPG)
 
 Youtube Kids returns to normal functionality until next iCare mini-game is triggered (based on parent settings).
-![Wireframe9](https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/HW2/wireframeV2_i.jpg)
+![Wireframe9](https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/HW2/wireframeV2_i.JPG)
 
 ## Final Remarks:
 English, no sound, no keyboard, chrome desktop only (responsive to window size), no accessibility options (things such as color blind support), no contact with a server (everything is saved locally), only one type of minigame
