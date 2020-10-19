@@ -36,7 +36,7 @@ Pop up opens with a  mini game (video also cannot be played)
 A timer is set where the popup will close regardless of status of the game
 Child can click on the buttons to choose their answer
 An incorrect answer will keep them on the minigame but will allow them to keep trying until time runs out
-![Wireframe4](https://github.com/autumn-info-442a/Team-iCare/blob/HW2/Wireframe2_5.png)
+![Wireframe4](https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/HW2/Wireframe5.JPG)
 
 ![Wireframe5](https://github.com/autumn-info-442a/Team-iCare/blob/HW2/Wireframe2_5-1.png)
 
