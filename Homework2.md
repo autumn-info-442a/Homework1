@@ -13,12 +13,12 @@ We are building a chrome extension where children watching Youtube Kids play edu
 - mini games are math based (multiplication, subtraction, division, addition)
 
 The interface behaves as a typical chrome extension, found in the extension bar. The pop-up screen displays after the user clicks on the iCare extension button.
-![Wireframe1](https://github.com/autumn-info-442a/Team-iCare/blob/HW2/Wireframe2_1.png)
+![Wireframe1](https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/HW2/wireframeV2_a.jpg)
 
 Parent clicks on the extension icon
 Welcome screen opens in a popup with a button for settings
 Clicking on settings button changes content of the popup to the settings
-![Wireframe2](https://github.com/autumn-info-442a/Team-iCare/blob/HW2/Wireframe2_2.png)
+![Wireframe2](https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/HW2/wireframeV2_b.JPG)
 
 **Dropdown: child age**
 * 5-12+
@@ -29,27 +29,27 @@ If total videos watched then 1-5
 If total watch times then 5-60 minutes, multiples of 5
 Clicking save closes the popup window and settings are stored locally
 Child watches a YouTube video while the extension is monitoring watch time/video count in the background set by the parent
-![Wireframe3](https://github.com/autumn-info-442a/Team-iCare/blob/HW2/Wireframe2_4.png)
+![Wireframe3](https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/HW2/wireframeV2_c.jpg)
 
 Watch time/video limit is reached
 Pop up opens with a  mini game (video also cannot be played)
 A timer is set where the popup will close regardless of status of the game
 Child can click on the buttons to choose their answer
 An incorrect answer will keep them on the minigame but will allow them to keep trying until time runs out
-![Wireframe4](https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/HW2/Wireframe5.JPG)
+![Wireframe4](https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/HW2/wireframeV2_d.jpg)
 
-![Wireframe5](https://github.com/autumn-info-442a/Team-iCare/blob/HW2/Wireframe2_5-1.png)
+![Wireframe5](https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/HW2/wireframeV2_e.jpg)
 
 ** 1-2 sentences about redirect to same game if answer is incorrect
-![Wireframe6](https://github.com/autumn-info-442a/Team-iCare/blob/HW2/Wireframe2_6-1.png)
+![Wireframe6](https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/HW2/wireframeV2_f.jpg)
  
-![Wireframe7](https://github.com/autumn-info-442a/Team-iCare/blob/HW2/Wireframe2_6.png)
+![Wireframe7](https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/HW2/wireframeV2_g.jpg)
 
 This is the page displayed after the mini-game question is answered correctly.
-![Wireframe8](https://github.com/autumn-info-442a/Team-iCare/blob/HW2/Wireframe2_7.png)
+![Wireframe8](https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/HW2/wireframeV2_h.jpg)
 
 Youtube Kids returns to normal functionality until next iCare mini-game is triggered (based on parent settings).
-![Wireframe9](https://github.com/autumn-info-442a/Team-iCare/blob/HW2/Wireframe2_8.png)
+![Wireframe9](https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/HW2/wireframeV2_i.jpg)
 
 ## Final Remarks:
 English, no sound, no keyboard, chrome desktop only (responsive to window size), no accessibility options (things such as color blind support), no contact with a server (everything is saved locally), only one type of minigame
