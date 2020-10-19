@@ -21,8 +21,8 @@ Clicking on settings button changes content of the popup to the settings page.
 In settings there are:
 
 * **3 Dropdowns** 
-  - Child Age: 7-12+ (int)
-  - Grade Level: (K, 1, 2, 3, ... , 7+) (string)
+  - _Child Age_: 7-12+ (int)
+  - _Grade Level_: (K, 1, 2, 3, ... , 7+) (string)
   - Reactive Dropdown: Based on radio buttons (see below)
   
 * **2 Radio Buttons**
@@ -35,17 +35,19 @@ When Save button is clicked settings data for all 4 user inputs (3 Dropwdowns, 1
 <p align="center">
   <img width="460" height="300" src="https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/HW2/wireframeV2_c.jpg">
 </p>
+
 Youtube Kids functions normally until either the _Total Videos Watched_ or _Total Watch Time_ setting is reached.
 <p align="center">
   <img width="460" height="300" src="https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/HW2/wireframeV2_d.JPG">
 </p>
-When user has either exceeded either _Total Videos Watched_ or _Total Watch Time_ setting a pop-up opens with a  mini game (video also cannot be played)
+
+When user has either exceeded either _Total Videos Watched_ or _Total Watch Time_ setting (determined from Radio Button and Reactive Dropdown selections) a pop-up opens with a  mini-game (video also cannot be played).
 A timer is set where the popup will close regardless of status of the game after 5 minutes. A user can click on the buttons to choose their answer.
-An incorrect answer will keep them on the minigame but will allow them to keep trying until time runs out
+* Text display of a math question selected from bank (dict, list, ?) of based on _Child Age_ and _Grade Level_ selections
+* 3 Answer Buttons display and are reactive to user hovering over a button and clicking on a button
 <p align="center">
   <img width="460" height="300" src="https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/HW2/wireframeV2_e.JPG">
 </p>
-
 ** 1-2 sentences about redirect to same game if answer is incorrect
 <p align="center">
   <img width="460" height="300" src="https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/HW2/wireframeV2_f.JPG">
