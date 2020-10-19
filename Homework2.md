@@ -14,7 +14,7 @@ The interface behaves as a typical chrome extension, found in the extension tool
   <img width="460" height="200" src="https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/HW2/wireframeV2_a.jpg">
 </p>
 
-Clicking on settings button changes content of the popup to the settings page. 
+Clicking on settings button changes pop-up to display settings options.
 <p align="center">
   <img width="460" height="300" src="https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/HW2/wireframeV2_b.JPG">
 </p>
