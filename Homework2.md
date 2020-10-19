@@ -73,4 +73,7 @@ iCare mini-game closes when user clicks on "filler" and Youtube Kids returns to 
 ## Final Remarks:
 English, no sound, no keyboard, chrome desktop only (responsive to window size), no accessibility options (things such as color blind support), no contact with a server (everything is saved locally), only one type of minigame
 
-
+### HowToo Comment:
+<p align="center">
+  <img width="460" height="300" src="https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/HW2/HowToo.JPG">
+</p>
