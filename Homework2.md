@@ -7,9 +7,9 @@ _INFO 442A: Samuel Christ, Jimmy Hua, Yichi Zhang, Spencer Knapp_
 In the United States, 60% of parents use YouTube as a tool for babysitting their children aged 7-13 on at least a biweekly basis [(Kessel, Smith, Toor)](https://www.pewresearch.org/internet/2018/11/07/many-turn-to-youtube-for-childrens-content-news-how-to-lessons/). This exposure is often unregulated, which poses risks of “binging” on content for extended periods of time. Research suggests that habitual consumption of YouTube content may lead to addiction and other psychological issues [(Campbell, Twenge](https://www.sciencedirect.com/science/article/pii/S2211335518301827), [Domoff)](https://news.umich.edu/kids-and-screen-time-signs-your-child-might-be-addicted/). YouTube Kids is an existing solution to some of these risks by removing comments and restricting videos shown. This approach to YouTube addiction is not effective because YouTube has a financial stake in designing its algorithm to promote high watch times to earn more revenue from ads. Parents have the option to remove all ads by purchasing YouTube Premium, which still fails to directly address the issues of YouTube addiction and self-regulation of watch time. In light of these risks associated with YouTube, what balance of parent intervention and platform moderation best promotes child safety and self regulation?  
 
 ## Solution
-We are building a chrome extension where children watching Youtube Kids play educational mini-games in between videos. Games will be written math problems (addition, subtraction, multiplication, division) where the user will select an answer by clicking on it. Parents/guardians can control the frequency of mini-game occurrances (as a pop-up displayed directly after a video ends) by specifying controls in the iCare settings. If a user selects the correct answer to a question, the pop-up will display a congratulations message with a text button to close and return to Youtube Kids. Otherwise the pop-up will display a try-again message with a text button to attempt the same mini-game until they answer correctly.
+We are building a Chrome extension where children watching Youtube Kids play educational mini-games in between videos. Games will be written math problems (addition, subtraction, multiplication, division) where the user will select an answer by clicking on it. Parents/guardians can control the frequency of mini-game occurrances (as a pop-up displayed directly after a video ends) by specifying controls in the iCare settings. If a user selects the correct answer to a question, the pop-up will display a congratulations message with a text button to close and return to Youtube Kids. Otherwise the pop-up will display a try-again message with a text button to attempt the same mini-game until they answer correctly.
 
-The interface behaves as a typical chrome extension, found in the extension toolbar. The pop-up screen displays after the user clicks on the iCare extension button.
+The interface behaves as a typical Chrome extension, found in the extension toolbar. The pop-up screen displays after the user clicks on the iCare extension button.
 <p align="center">
   <img width="460" height="200" src="https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/HW2/wireframeV2_a.jpg">
 </p>
@@ -32,7 +32,7 @@ In settings there are:
   - _Total Watch Time_ (Minutes):
     Else, Total Watch Time is selected and _Reactive Dropdown_ displays 5-60 (int) only multiples of 5 (starting at 5, 10, 15, ...)
  
-When Save button is clicked settings data for all 4 user inputs (3 Dropwdowns, 1 Radio Button selection) will be saved locally and pop-up closes. While user watches videos on Youtube Kids iCare extension tracks total watch time or total video count based on settings. If any settings have been specified/saved then mini-games will not display.
+When the Save button is clicked, settings data for all 4 user inputs (3 Dropdowns, 1 Radio Button selection) will be saved locally and pop-up closes. While user watches videos on Youtube Kids, the iCare extension tracks total watch time or total video count based on settings. If any settings have been specified/saved then mini-games will not display.
 
 <p align="center">
   <img width="460" height="300" src="https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/HW2/wireframeV2_c.jpg">
@@ -43,7 +43,7 @@ Youtube Kids functions normally until either the _Total Videos Watched_ or _Tota
   <img width="460" height="300" src="https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/HW2/wireframeV2_d.JPG">
 </p>
 
-When user has exceeded either _Total Videos Watched_ or _Total Watch Time_ setting (check saved Radio Button and Reactive Dropdown selections) a pop-up opens with a  mini-game (pop-up blocks Youtube Kids video from playing).
+When user has exceeded either _Total Videos Watched_ or _Total Watch Time_ setting (check saved Radio Button and Reactive Dropdown selections) a pop-up opens with a mini-game (pop-up blocks Youtube Kids video from playing).
 
 A user can click on the buttons to choose their answer:
 * Text display of a math question selected from bank (dict, list, ?) of based on _Child Age_ and _Grade Level_ selections
