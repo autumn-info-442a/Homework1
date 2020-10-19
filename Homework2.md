@@ -29,7 +29,7 @@ In settings there are:
 * **2 Radio Buttons**
   - _Total Videos Watched_:
     If selected, Reactive Dropdown will display 1-5 (int)
-  - _Total Watch Time_ (Minutes)
+  - _Total Watch Time_ (Minutes):
     Else, Total Watch Time is selected and displays 5-60 (int) only multiples of 5 (starting at 5, 10, 15, ...)
  
 When Save button is clicked settings data for all 4 user inputs (3 Dropwdowns, 1 Radio Button selection) will be saved locally and pop-up closes. Child watches a YouTube video while the extension is monitoring watch time/video count in the background set by the parent.
