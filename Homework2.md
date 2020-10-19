@@ -43,13 +43,13 @@ An incorrect answer will keep them on the minigame but will allow them to keep t
 ** 1-2 sentences about redirect to same game if answer is incorrect
 ![Wireframe6](https://github.com/autumn-info-442a/Team-iCare/blob/HW2/Wireframe2_6-1.png)
  
-![Wireframe1](https://github.com/autumn-info-442a/Team-iCare/blob/HW2/Wireframe2_6.png)
+![Wireframe7](https://github.com/autumn-info-442a/Team-iCare/blob/HW2/Wireframe2_6.png)
 
 This is the page displayed after the mini-game question is answered correctly.
-![Wireframe7](https://github.com/autumn-info-442a/Team-iCare/blob/HW2/Wireframe2_7.png)
+![Wireframe8](https://github.com/autumn-info-442a/Team-iCare/blob/HW2/Wireframe2_7.png)
 
 Youtube Kids returns to normal functionality until next iCare mini-game is triggered (based on parent settings).
-![Wireframe8](https://github.com/autumn-info-442a/Team-iCare/blob/HW2/Wireframe2_8.png)
+![Wireframe9](https://github.com/autumn-info-442a/Team-iCare/blob/HW2/Wireframe2_8.png)
 
 ## Final Remarks:
 English, no sound, no keyboard, chrome desktop only (responsive to window size), no accessibility options (things such as color blind support), no contact with a server (everything is saved locally), only one type of minigame
