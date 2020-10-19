@@ -23,7 +23,8 @@ In settings there are:
 * **3 Dropdowns** 
   - _Child Age_: 7-12+ (int)
   - _Grade Level_: (K, 1, 2, 3, ... , 7+) (string)
-  - Reactive Dropdown: Based on radio buttons (see below)
+  - Reactive Dropdown: On start displays options for _Total Watch Time_
+    (this is the pre-selected button before settings are saved locally). 
   
 * **2 Radio Buttons**
   - _Total Videos Watched_:
@@ -48,10 +49,13 @@ A timer is set where the popup will close regardless of status of the game after
 <p align="center">
   <img width="460" height="300" src="https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/HW2/wireframeV2_e.JPG">
 </p>
-** 1-2 sentences about redirect to same game if answer is incorrect
+
+If user clicks on incorrect answer a try again message is displayed in the pop-up.
+* A user clicks a text button "Click here to retry!" to restart the game.
 <p align="center">
   <img width="460" height="300" src="https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/HW2/wireframeV2_f.JPG">
 </p>
+
 Filler text
 <p align="center">
   <img width="460" height="300" src="https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/HW2/wireframeV2_g.JPG">
