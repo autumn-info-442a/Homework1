@@ -23,12 +23,12 @@ In settings there are:
 * **3 Dropdowns** 
   - _Child Age_: 7-12+ (int)
   - _Grade Level_: (K, 1, 2, 3, ... , 7+) (string)
-  - Reactive Dropdown: On start displays options for _Total Watch Time_
+  - _Reactive Dropdown_: On start displays options for _Total Watch Time_
     (this is the pre-selected button before settings are saved locally). 
   
 * **2 Radio Buttons**
   - _Total Videos Watched_:
-    If selected, Reactive Dropdown will display 1-5 (int)
+    If selected, _Reactive Dropdown_ will display 1-5 (int)
   - _Total Watch Time_ (Minutes):
     Else, Total Watch Time is selected and displays 5-60 (int) only multiples of 5 (starting at 5, 10, 15, ...)
  
