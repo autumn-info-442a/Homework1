@@ -3,9 +3,16 @@ Samuel Christ, Jimmy Hua, Yichi Zhang, Spencer Knapp
 
 # Homework 2: Design
 
-* Problem (1 point). Full credit for something that is logically sound and clearly defined.
+## Problem
 
 In the United States, 60% of parents use YouTube as a tool for babysitting their children (ages 7-13) on at least a biweekly basis. This exposure is often unregulated, which poses risks of “binging” on content for extended periods of time. Research suggests that habitual consumption of YouTube content may lead to addiction and other psychological issues. YouTube Kids is an existing solution to some of these risks by removing comments and restricting videos shown. This approach to YouTube addiction is not effective because YouTube has a financial stake in designing its algorithm to promote high watch times to earn more revenue from ads. Parents have the option to remove all ads by purchasing YouTube Premium, which still fails to directly address the issues of YouTube addiction and self-regulation of watch time. In light of these risks associated with YouTube, what balance of parent intervention and platform moderation best promotes child safety and self regulation?  
+
+## Solution
+We are building a chrome extension where children watching Youtube Kids play educational mini-games in between videos.
+- parents control frequency of mini-game pop-ups in settings
+- mini games are math based (multiplication, subtraction, division, addition)
+
+![Wireframe1](https://github.com/autumn-info-442a/Team-iCare/blob/HW2/Wireframe2.png)
 
 * Details (3 point). Lose 0.25 points for every interactive detail that is critical to solving the problem that is not specified. It's okay if visual details are not specified, since those can be changed easily. I want to see the core functionality of your application fully specified.
 
