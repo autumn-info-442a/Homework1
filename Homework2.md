@@ -30,7 +30,7 @@ In settings there are:
   - _Total Videos Watched_:
     If selected, _Reactive Dropdown_ will display 1-5 (int)
   - _Total Watch Time_ (Minutes):
-    Else, Total Watch Time is selected and displays 5-60 (int) only multiples of 5 (starting at 5, 10, 15, ...)
+    Else, Total Watch Time is selected and _Reactive Dropdown_ displays 5-60 (int) only multiples of 5 (starting at 5, 10, 15, ...)
  
 When Save button is clicked settings data for all 4 user inputs (3 Dropwdowns, 1 Radio Button selection) will be saved locally and pop-up closes. While user watches videos on Youtube Kids iCare extension tracks total watch time or total video count based on settings. If any settings have been specified/saved then mini-games will not display.
 
