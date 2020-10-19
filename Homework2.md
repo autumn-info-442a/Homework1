@@ -20,8 +20,9 @@ The interface behaves as a typical chrome extension, found in the extension bar.
 Parent clicks on the extension icon
 Welcome screen opens in a popup with a button for settings
 Clicking on settings button changes content of the popup to the settings
-![Wireframe2](https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/HW2/wireframeV2_b.JPG)
-
+<p align="center">
+  <img width="460" height="300" src="https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/HW2/wireframeV2_b.JPG">
+</p>
 **Dropdown: child age**
 * 5-12+
 **Dropdown: grade level (k-6)**
@@ -31,27 +32,43 @@ If total videos watched then 1-5
 If total watch times then 5-60 minutes, multiples of 5
 Clicking save closes the popup window and settings are stored locally
 Child watches a YouTube video while the extension is monitoring watch time/video count in the background set by the parent
-![Wireframe3](https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/HW2/wireframeV2_c.jpg)
+<p align="center">
+  <img width="460" height="300" src="https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/HW2/wireframeV2_c.jpg">
+</p>
 
 Watch time/video limit is reached
 Pop up opens with a  mini game (video also cannot be played)
 A timer is set where the popup will close regardless of status of the game
 Child can click on the buttons to choose their answer
 An incorrect answer will keep them on the minigame but will allow them to keep trying until time runs out
-![Wireframe4](https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/HW2/wireframeV2_d.JPG)
-
-![Wireframe5](https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/HW2/wireframeV2_e.JPG)
+<p align="center">
+  <img width="460" height="300" src="https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/HW2/wireframeV2_d.JPG">
+</p>
+Filler text
+<p align="center">
+  <img width="460" height="300" src="https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/HW2/wireframeV2_e.JPG">
+</p>
 
 ** 1-2 sentences about redirect to same game if answer is incorrect
-![Wireframe6](https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/HW2/wireframeV2_f.JPG)
- 
-![Wireframe7](https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/HW2/wireframeV2_g.JPG)
+<p align="center">
+  <img width="460" height="300" src="https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/HW2/wireframeV2_f.JPG">
+</p>
+Filler text
+<p align="center">
+  <img width="460" height="300" src="https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/HW2/wireframeV2_g.JPG">
+</p>
+
 
 This is the page displayed after the mini-game question is answered correctly.
-![Wireframe8](https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/HW2/wireframeV2_h.JPG)
+<p align="center">
+  <img width="460" height="300" src="https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/HW2/wireframeV2_h.JPG">
+</p>
 
-Youtube Kids returns to normal functionality until next iCare mini-game is triggered (based on parent settings).
-![Wireframe9](https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/HW2/wireframeV2_i.JPG)
+iCare mini-game closes when user clicks on "filler" and Youtube Kids returns to normal functionality until next game is triggered (based on parent settings).
+<p align="center">
+  <img width="460" height="300" src="https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/HW2/wireframeV2_i.JPG">
+</p>
+
 
 ## Final Remarks:
 English, no sound, no keyboard, chrome desktop only (responsive to window size), no accessibility options (things such as color blind support), no contact with a server (everything is saved locally), only one type of minigame
