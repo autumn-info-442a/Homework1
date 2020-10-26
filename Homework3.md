@@ -71,5 +71,6 @@
 - The overlay will show up for an amount of time as determined in the settings
 - The “close” button is disabled until the timer reaches zero
 - After the timer is over, the user can close the overlay
+- The videos watched threshold will reset after the timer hits zero
 - The videos watched threshold will reset after the user closes the YouTube Kids webpage
 
