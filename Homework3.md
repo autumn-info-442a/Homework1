@@ -63,7 +63,8 @@
 
 ### Functionality
 - iCare message overlay will show up after user exceeds the video count threshold that was saved in the settings
-- The overlay will pause the currently playing video 
+- The overlay will pause the currently playing video
+- User is unable to play/unpause a video while the overlay is active
 - Refreshing the browser removes the current instance of the iCare overlay
 - When the overlay shows up, it will randomly pick one of the messages from all the message pools selected in the settings
 - The randomly chosen message is displayed on the overlay
