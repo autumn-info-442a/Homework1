@@ -63,6 +63,7 @@
 
 ### Functionality
 - iCare message overlay will show up after user exceeds the video count threshold that was saved in the settings
+- The videos watched threshold will reset after the overlay is activated
 - The overlay will pause the currently playing video
 - User is unable to play/unpause a video while the overlay is active
 - Refreshing the browser removes the current instance of the iCare overlay
@@ -71,6 +72,3 @@
 - The overlay will show up for an amount of time as determined in the settings
 - The “close” button is disabled until the timer reaches zero
 - After the timer is over, the user can close the overlay
-- The videos watched threshold will reset after the timer hits zero
-- The videos watched threshold will reset after the user closes the YouTube Kids webpage
-
