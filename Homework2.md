@@ -35,8 +35,17 @@ In settings there are:
 When the Save button is clicked, settings data for all 4 user inputs (3 Dropdowns, 1 Radio Button selection) will be saved locally and pop-up closes. While user watches videos on Youtube Kids, the iCare extension tracks total watch time or total video count based on settings. If any settings have been specified/saved then mini-games will not display.
 
 <p align="center">
-  <img width="460" height="300" src="2.JPGg">
+  <img width="460" height="300" src="https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/design/2.JPG">
 </p>
+
+<p align="center">
+  <img width="460" height="300" src="https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/design/3.JPG">
+</p>
+
+<p align="center">
+  <img width="460" height="300" src="https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/design/4.JPG">
+</p>
+
 
 Youtube Kids functions normally until either the _Total Videos Watched_ or _Total Watch Time_ setting is reached.
 <p align="center">
@@ -51,32 +60,20 @@ A user can click on the buttons to choose their answer:
 
 **A timer is set where the popup will close regardless of status of the game (if user has not clicked on an answer) after 5 minutes.**
 <p align="center">
-  <img width="460" height="300" src="https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/HW2/wireframeV2_e.JPG">
+  <img width="460" height="300" src="https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/design/5.JPG">
 </p>
 <p align="center">
-  <img width="460" height="300" src="https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/HW2/wireframeV2_f.JPG">
+  <img width="460" height="300" src="https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/design/6.JPG">
 </p>
 
-If user clicks on incorrect answer a try again message is displayed in the pop-up.
-* A user clicks a text button "Click here to retry!" to restart the game
-<p align="center">
-  <img width="460" height="300" src="https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/HW2/wireframeV2_g.JPG">
-</p>
-
-Pop-up displays "Nice Work" message after the user clicks on the correct answer for the mini-game.
-
-<p align="center">
-  <img width="460" height="300" src="https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/HW2/wireframeV2_h.JPG">
-</p>
-
-iCare mini-game closes when user clicks on the "Click here to keep watching Youtube" text button. Youtube Kids returns to normal functionality until next game is triggered (based on parent settings).
+iCare message pop-up closes when user clicks on the "Close" text button. Youtube Kids returns to normal functionality until next game is triggered (based on parent settings).
 <p align="center">
   <img width="460" height="300" src="https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/HW2/wireframeV2_i.JPG">
 </p>
 
 
 ## Additional Notes:
-For this iteration of iCare, all text will be in American English. There will be no sound, no keyboard user inputs (all user inputs will be click based), and no additional features for accessibility (i.e. color toggle for color-blind, voice controls, etc). iCare will only function on the Chrome browser as a Chrome extension (Firefox, Safari, etc not supported). All user data (settings, count of videos/day, total watch time/day) will be saved locally. For this iteration, _Total Videos Watched_ **and** _Total Watch Time_ amounts will be reset every 24 hours.
+For this iteration of iCare, all text will be in American English. There will be no sound, no keyboard user inputs (all user inputs will be click based), and no additional features for accessibility (i.e. color toggle for color-blind, voice controls, etc). iCare will only function on the Chrome browser as a Chrome extension (Firefox, Safari, etc not supported). All user data (settings, count of videos/day) will be saved locally. For this iteration, _Total Videos Watched_ amount will be reset every 24 hours.
 
 ### HowToo Comment:
 <p align="center">
