@@ -30,7 +30,7 @@ In settings there are:
  
 * **Pre-Made Messages** 
   - Displays messages based on which radio buttons are selected in **Set Messages**
-  - User can edit message by clicking on pencil icon, or delete from message pool by clicking on x icon
+  - User can enable or disable messages by clicking on "Enable" or "Disable" radio buttons next to each message (these radio buttons allow for **one** selection, not both)
   
 * **Custom Messages** 
   - Displays messages based on saved custome messages entered in **Set Messages**
@@ -55,14 +55,14 @@ If user attempts to exit iCare settings page without clicking "Save All Settings
   <img width="460" height="300" src="https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/design/4.JPG">
 </p>
 
-Youtube Kids functions normally until either the _# of Videos_ counted by iCare exceeds the user-specified _# of Videos_ (based on saved settings).
+Youtube Kids functions normally until the _# of Videos_ counted by iCare exceeds the user-specified _# of Videos_ (based on saved settings).
 <p align="center">
   <img width="460" height="300" src="https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/HW2/wireframeV2_d.JPG">
 </p>
 
-When user has exceeded either _# of Videos_ setting a message is displayed as a pop-up over the Youtube Kids video. The popup display will 
+When user has exceeded the _# of Videos_ counted by iCare exceeds the user-specified _# of Videos_ setting a message is displayed as a pop-up over the Youtube Kids video. The message will be randomly selected from any enabled pre-made message(s) or custom message(s) saved by user.
 
-**A timer is displayed counting down 15-0 (in seconds). When 
+**All messages will display for 15 seconds**. The timer will count down from 15-0, when 15 seconds have elasped the "Close" button will becomed enabled for user to click.
 <p align="center">
   <img width="460" height="300" src="https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/design/5.JPG">
 </p>
@@ -70,14 +70,15 @@ When user has exceeded either _# of Videos_ setting a message is displayed as a 
   <img width="460" height="300" src="https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/design/6.JPG">
 </p>
 
-iCare message pop-up closes when user clicks on the "Close" text button. Youtube Kids returns to normal functionality until next game is triggered (based on parent settings).
+iCare message pop-up closes when user clicks on the "Close" text button. Youtube Kids returns to normal functionality until next message is triggered (based on _# of Videos_ watched exceeding settings).
+
 <p align="center">
   <img width="460" height="300" src="https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/HW2/wireframeV2_i.JPG">
 </p>
 
 
 ## Additional Notes:
-For this iteration of iCare, all text will be in American English. There will be no sound, no keyboard user inputs (all user inputs will be click based), and no additional features for accessibility (i.e. color toggle for color-blind, voice controls, etc). iCare will only function on the Chrome browser as a Chrome extension (Firefox, Safari, etc not supported). All user data (settings, count of videos/day) will be saved locally. For this iteration, _Total Videos Watched_ amount will be reset every 24 hours.
+For this iteration of iCare, all text will be in American English. There will be no sound, no keyboard user inputs (all user inputs will be click based), and no additional features for accessibility (i.e. color toggle for color-blind, voice controls, etc). iCare will only function on the Chrome browser as a Chrome extension (Firefox, Safari, etc not supported). All user data (settings, count of videos/day) will be saved locally. For this iteration, _Total Videos Watched_ amount will be reset to 0 after a message is displayed.
 
 ### HowToo Comment:
 <p align="center">
