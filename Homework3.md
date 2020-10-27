@@ -19,7 +19,7 @@
 - The settings page displays the pools/categories of messages
 - The settings page displays a table of custom messages
 - The settings page displays threshold settings
-- Each message has a time duration associated with it ranging from 5 seconds to 5 minutes
+- Each message has a time duration of 15 seconds.
 - User is able to pick and choose pools/categories of messages
 - User is able to see each message within a pool/category
 - User is able to enable/disable individual messages within a pool/category
@@ -27,7 +27,6 @@
 
 ### Custom Messages
 - User is able to add their own custom message
-- User is able to add a time duration to their own custom message
 - User can add multiple custom messages
 - User can view their custom messages
 - User can edit their custom messages
@@ -36,14 +35,13 @@
 - User cannot add an empty message
 - A warning/alert is displayed if the user attempts to add an empty message
 - Custom messages all belong to the same pool/category
-- Custom messages without a time duration set default to 15 seconds
 - All messages have a character limit of 50
 
 ### Watch Threshold
 - User can set the videos watched threshold to display a message
 - Videos watched threshold ranges from 1 to 5 videos
-- Custom message is saved by click the “save” button
-- User settings are saved when the “save” button is pressed 
+- Custom message is saved by click the “add” button
+- User settings are saved when the “Save All Settings” button is pressed 
 - Clicking off the extension’s popup closes it
 - User settings are saved onto the Chrome extension’s local storage
 - Alert is displayed if/when settings fail to save
