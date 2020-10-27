@@ -17,9 +17,8 @@
 
 ## Settings
 - The settings page displays the pools/categories of messages
-- The settings page displays a table of custom messages
+- The settings page displays a list of custom messages
 - The settings page displays threshold settings
-- Each message has a time duration of 15 seconds.
 - User is able to pick and choose pools/categories of messages
 - User is able to see each message within a pool/category
 - User is able to enable/disable individual messages within a pool/category
@@ -60,6 +59,7 @@
 - The timer displayed is counting down towards zero
 
 ### Functionality
+- Each message has a time duration of 15 seconds.
 - iCare message overlay will show up after user exceeds the video count threshold that was saved in the settings
 - The videos watched threshold will reset after the overlay is activated
 - The overlay will pause the currently playing video
