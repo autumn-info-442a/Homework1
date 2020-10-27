@@ -21,7 +21,8 @@ Clicking on settings button redirects user to iCare settings web page.
 In settings there are:
 
 * **Set Messages** 
-  - 2 Radio buttons for pre-made messages in "Motivational" or "Screen Time" categories, user can select multiple categories
+  - 2 Radio buttons for pre-made messages in "Motivational" or "Screen Time" categories, user can select multiple categories (these radio buttons allow for **multiple*    
+    selections)
   - 1 Textbox for user to type a custom message (50 characters max), clicking add button saves locally
   
 * **Message Frequency** 
