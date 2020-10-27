@@ -21,13 +21,12 @@ Clicking on settings button redirects user to iCare settings web page.
 In settings there are:
 
 * **Set Messages** 
-  - 2 Radio buttons for pre-made messages in "Motivational" or "Screen Time" categories, user can select multiple categories (these radio buttons allow for **multiple*    
+  - 2 Radio buttons for pre-made messages in "Motivational" or "Screen Time" categories, user can select multiple categories (these radio buttons allow for **multiple**    
     selections)
   - 1 Textbox for user to type a custom message (50 characters max), clicking add button saves locally
   
 * **Message Frequency** 
   - Dropdown 1: # of Videos (int 1-5)
-  - Dropdown 2: Duration of Message (int 5-30, multiples of 5 only)
  
 * **Pre-Made Messages** 
   - Displays messages based on which radio buttons are selected in **Set Messages**
@@ -38,7 +37,7 @@ In settings there are:
   - User can edit message by clicking on pencil icon, or delete from message pool by clicking on x icon
   
   
-When the Save button is clicked, settings data for all user inputs will be saved locally (pre-made and custom messages, # of videos, duration of message) and page closes. While user watches videos on Youtube Kids, the iCare extension tracks total video count based on settings.
+When the Save button is clicked, settings data for all user inputs will be saved locally (pre-made and custom messages, # of videos) and page closes. While user watches videos on Youtube Kids, the iCare extension tracks total video count based on settings.
 
 <p align="center">
   <img width="460" height="300" src="https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/main/2.JPG">
