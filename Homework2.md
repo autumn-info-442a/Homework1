@@ -14,7 +14,7 @@ The interface behaves as a typical Chrome extension, found in the extension tool
   <img width="460" height="200" src="https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/HW2/wireframeV2_a.jpg">
 </p>
 
-Clicking on settings button changes pop-up to display settings options.
+Clicking on settings button redirects user to iCare settings web page.
 <p align="center">
   <img width="460" height="300" src="https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/HW2/wireframeV2_b.JPG">
 </p>
@@ -35,7 +35,7 @@ In settings there are:
 When the Save button is clicked, settings data for all 4 user inputs (3 Dropdowns, 1 Radio Button selection) will be saved locally and pop-up closes. While user watches videos on Youtube Kids, the iCare extension tracks total watch time or total video count based on settings. If any settings have been specified/saved then mini-games will not display.
 
 <p align="center">
-  <img width="460" height="300" src="https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/HW2/wireframeV2_c.jpg">
+  <img width="460" height="300" src="2.JPGg">
 </p>
 
 Youtube Kids functions normally until either the _Total Videos Watched_ or _Total Watch Time_ setting is reached.
