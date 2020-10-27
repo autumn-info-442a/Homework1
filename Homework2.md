@@ -33,7 +33,7 @@ In settings there are:
   - User can enable or disable messages by clicking on "Enable" or "Disable" radio buttons next to each message (these radio buttons allow for **one** selection, not both)
   
 * **Custom Messages** 
-  - Displays messages based on saved custome messages entered in **Set Messages**
+  - Displays messages based on saved custom messages entered in **Set Messages**
   - User can edit message by clicking on pencil icon, or delete from message pool by clicking on x icon
   
   
@@ -62,7 +62,7 @@ Youtube Kids functions normally until the _# of Videos_ counted by iCare exceeds
 
 When user has exceeded the _# of Videos_ counted by iCare exceeds the user-specified _# of Videos_ setting a message is displayed as a pop-up over the Youtube Kids video. The message will be randomly selected from any enabled pre-made message(s) or custom message(s) saved by user.
 
-**All messages will display for 15 seconds**. The timer will count down from 15-0, when 15 seconds have elasped the "Close" button will becomed enabled for user to click.
+**All messages will display for 15 seconds**. The timer will count down from 15-0, when 15 seconds have elasped the "Close" button will become enabled for user to click.
 <p align="center">
   <img width="460" height="300" src="https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/design/5.JPG">
 </p>
