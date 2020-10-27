@@ -7,7 +7,7 @@ _INFO 442A: Samuel Christ, Jimmy Hua, Yichi Zhang, Spencer Knapp_
 In the United States, 60% of parents use YouTube as a tool for babysitting their children aged 7-13 on at least a biweekly basis [(Kessel, Smith, Toor)](https://www.pewresearch.org/internet/2018/11/07/many-turn-to-youtube-for-childrens-content-news-how-to-lessons/). This exposure is often unregulated, which poses risks of “binging” on content for extended periods of time. Research suggests that habitual consumption of YouTube content may lead to addiction and other psychological issues [(Campbell, Twenge](https://www.sciencedirect.com/science/article/pii/S2211335518301827), [Domoff)](https://news.umich.edu/kids-and-screen-time-signs-your-child-might-be-addicted/). YouTube Kids is an existing solution to some of these risks by removing comments and restricting videos shown. This approach to YouTube addiction is not effective because YouTube has a financial stake in designing its algorithm to promote high watch times to earn more revenue from ads. Parents have the option to remove all ads by purchasing YouTube Premium, which still fails to directly address the issues of YouTube addiction and self-regulation of watch time. In light of these risks associated with YouTube, what balance of parent intervention and platform moderation best promotes child safety and self regulation?  
 
 ## Solution
-We are building a Chrome extension where children watching Youtube Kids play educational mini-games in between videos. Games will be written math problems (addition, subtraction, multiplication, division) where the user will select an answer by clicking on it. Parents/guardians can control the frequency of mini-game occurrances (as a pop-up displayed directly after a video ends) by specifying controls in the iCare settings. If a user selects the correct answer to a question, the pop-up will display a congratulations message with a text button to close and return to Youtube Kids. Otherwise the pop-up will display a try-again message with a text button to attempt the same mini-game until they answer correctly.
+We are building a Chrome extension where children watching Youtube Kids receive positive messages in between videos. Messages will be selected from pre-made categories and user-entered custom messages (max 50 characters). Parents/guardians can control the frequency of message occurrances (as a pop-up displayed directly after a video ends) by specifying controls in the iCare settings page. A parent can also edit, or remove any custom or pre-made message in the settings page. The messages displayed to a child watching Youtube Kids will be randomly selected from the pool of messages specified by the parent in the settings page (saved locally). By default, the "Motivational" category of pre-made messages is selected.
 
 The interface behaves as a typical Chrome extension, found in the extension toolbar. The pop-up screen displays after the user clicks on the iCare extension button.
 <p align="center">
@@ -20,39 +20,47 @@ Clicking on settings button redirects user to iCare settings web page.
 </p>
 In settings there are:
 
-* **3 Dropdowns** 
-  - _Child Age_: 7-12+ (int)
-  - _Grade Level_: (K, 1, 2, 3, ... , 7+) (string)
-  - _Reactive Dropdown_: On start displays options for _Total Watch Time_
-    (this is the pre-selected button before settings are saved locally). 
+* **Set Messages** 
+  - 2 Radio buttons for pre-made messages in "Motivational" or "Screen Time" categories
+  - 1 Textbox for user to type a custom message (50 characters max), clicking add button saves locally
   
-* **2 Radio Buttons**
-  - _Total Videos Watched_:
-    If selected, _Reactive Dropdown_ will display 1-5 (int)
-  - _Total Watch Time_ (Minutes):
-    Else, Total Watch Time is selected and _Reactive Dropdown_ displays 5-60 (int) only multiples of 5 (starting at 5, 10, 15, ...)
+* **Message Frequency** 
+  - Dropdown 1: # of Videos (int 1-5)
+  - Dropdown 2: Duration of Message (int 5-30, multiples of 5 only)
  
-When the Save button is clicked, settings data for all 4 user inputs (3 Dropdowns, 1 Radio Button selection) will be saved locally and pop-up closes. While user watches videos on Youtube Kids, the iCare extension tracks total watch time or total video count based on settings. If any settings have been specified/saved then mini-games will not display.
+* **Pre-Made Messages** 
+  - Displays messages based on which radio buttons are selected in **Set Messages**
+  - User can edit message by clicking on pencil icon, or delete from message pool by clicking on x icon
+  
+* **Custom Messages** 
+  - Displays messages based on saved custome messages entered in **Set Messages**
+  - User can edit message by clicking on pencil icon, or delete from message pool by clicking on x icon
+  
+  
+When the Save button is clicked, settings data for all user inputs will be saved locally (pre-made and custom messages, # of videos, duration of message) and page closes. While user watches videos on Youtube Kids, the iCare extension tracks total video count based on settings.
 
 <p align="center">
   <img width="460" height="300" src="https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/design/2.JPG">
 </p>
 
+If user attempts to add a custom message without any characters an alert message is displayed as a pop-up prompting user to add text in the "Custom Message" box.
+
 <p align="center">
   <img width="460" height="300" src="https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/design/3.JPG">
 </p>
+
+If user attempts to exit iCare settings page without clicking "Save All Settings" an alert message is displayed as a pop-up prompting user to save (settings are then stored locally).
 
 <p align="center">
   <img width="460" height="300" src="https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/design/4.JPG">
 </p>
 
-
-Youtube Kids functions normally until either the _Total Videos Watched_ or _Total Watch Time_ setting is reached.
+Youtube Kids functions normally until either the _# of Videos_ counted by iCare exceeds the user-specified _# of Videos_ (based on saved settings).
 <p align="center">
   <img width="460" height="300" src="https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/HW2/wireframeV2_d.JPG">
 </p>
 
-When user has exceeded either _Total Videos Watched_ or _Total Watch Time_ setting (check saved Radio Button and Reactive Dropdown selections) a pop-up opens with a mini-game (pop-up blocks Youtube Kids video from playing).
+When user has exceeded either _# of Videos_ setting a message is displayed as a pop-up over the Youtube Kids video.
 
 A user can click on the buttons to choose their answer:
 * Text display of a math question selected based on _Child Age_ and _Grade Level_ selections
