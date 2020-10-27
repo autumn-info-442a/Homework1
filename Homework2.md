@@ -60,13 +60,9 @@ Youtube Kids functions normally until either the _# of Videos_ counted by iCare 
   <img width="460" height="300" src="https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/HW2/wireframeV2_d.JPG">
 </p>
 
-When user has exceeded either _# of Videos_ setting a message is displayed as a pop-up over the Youtube Kids video.
+When user has exceeded either _# of Videos_ setting a message is displayed as a pop-up over the Youtube Kids video. The popup display will 
 
-A user can click on the buttons to choose their answer:
-* Text display of a math question selected based on _Child Age_ and _Grade Level_ selections
-* 3 Answer Buttons display and are reactive to user hovering over a button and clicking on a button
-
-**A timer is set where the popup will close regardless of status of the game (if user has not clicked on an answer) after 5 minutes.**
+**A timer is displayed counting down 15-0 (in seconds). When 
 <p align="center">
   <img width="460" height="300" src="https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/design/5.JPG">
 </p>
