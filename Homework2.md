@@ -30,10 +30,12 @@ In settings there are:
  
 * **Pre-Made Messages** 
   - Displays messages based on which radio buttons are selected in **Set Messages**
+  - Messages are in a fixed table that the user can scroll through (if contents exceed fixed size)
   - Each message has a radio button "Show" with default state of selected. User can select/deselect the button to control whether a premade message shows or not
   
 * **Custom Messages** 
   - Displays messages based on saved custom messages entered in **Set Messages**
+  - Messages are in a fixed table that the user can scroll through (if contents exceed fixed size)
   - User can edit message by clicking on pencil icon, or delete from message pool by clicking on x icon
   
   
