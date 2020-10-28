@@ -6,7 +6,7 @@
 - [G3] All text must be displayed in American English
 - [G4] The font displayed will be in Arial
 
-## Extension Pop-up
+## Extension Pop-up [E]
 - [E1] Extension icon displays in the extension toolbar on the top right corner of the browser
 - [E2] Extension icon must match the iCare logo
 - [E3] Left-clicking extension icon on the extension toolbar must open the extension’s popup window 
@@ -16,7 +16,7 @@
 - [E7] Clicking the "settings" button redirects the user to a new HTML page
 - [E8] Clicking outside of the extension's popup (onto the browser window) closes it
 
-## Settings
+## Settings [S]
 - [S1] The settings page must display the categories of messages
 - [S2] The settings page must display a list of custom messages
 - [S3] The settings page must display threshold settings
@@ -25,7 +25,7 @@
 - [S6] Users must be able to enable/disable individual messages within a pool/category
 - [S7] There must be a minimum of one message enabled across all pools (including custom messages)
 
-### Custom Messages
+### Custom Messages [C]
 - [C1] Users must be able to add their own custom message
 - [C2] Users must be able to add multiple custom messages
 - [C3] Users must be able to view their custom messages
@@ -38,7 +38,7 @@
 - [C10] Custom messages must be able to be saved by clicking the “add” button
 - [C11] All messages must have a character limit of 50
 
-### Watch Threshold
+### Watch Threshold [W]
 - [W1] User must be able to set the videos watched threshold to display a message
 - [W2] Videos watched threshold must range from 1 to 5 videos
 - [W3] User settings must be saved when the “Save” button is pressed 
@@ -47,7 +47,7 @@
 
 ## Messages
 
-### Visual
+### Visual [V]
 - [V1] Messages must overlay on top of the video in standard view
 - [V2] Messages must overlay on top of the video in full screen view
 - [V3] The extension tracks total videos watched since the last message was displayed
@@ -58,7 +58,7 @@
 - [V8] There must be a timer displaying the time remaining (in seconds) on the message overlay
 - [V9] The timer displayed must be counting down towards zero
 
-### Functionality
+### Functionality [F]
 - [F1] Each message and overlay must have a time duration of 15 seconds.
 - [F2] iCare message overlay must show up after user exceeds the video count threshold that was saved in the settings
 - [F3] The videos watched threshold must reset after the overlay is activated
