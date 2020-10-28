@@ -30,29 +30,29 @@ In settings there are:
  
 * **Pre-Made Messages** 
   - Displays messages based on which radio buttons are selected in **Set Messages**
-  - User can enable or disable messages by clicking on "Enable" or "Disable" radio buttons next to each message (these radio buttons allow for **one** selection, not both)
+  - Each message has a radio button "Show" with default state of selected. User can select/deselect the button to control whether a premade message shows or not
   
 * **Custom Messages** 
   - Displays messages based on saved custom messages entered in **Set Messages**
   - User can edit message by clicking on pencil icon, or delete from message pool by clicking on x icon
   
   
-When the Save button is clicked, settings data for all user inputs will be saved locally (pre-made and custom messages, # of videos) and page closes. While user watches videos on Youtube Kids, the iCare extension tracks total video count based on settings.
+When the Save button is clicked, settings data for all user inputs will be saved locally (pre-made and custom messages to show, # of videos) and page closes. While user watches videos on Youtube Kids, the iCare extension tracks total video count based on settings.
 
 <p align="center">
-  <img width="460" height="300" src="https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/main/2.JPG">
+  <img width="460" height="300" src="https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/main/2_1.JPG">
 </p>
 
 If user attempts to add a custom message without any characters an alert message is displayed as a pop-up prompting user to add text in the "Custom Message" box.
 
 <p align="center">
-  <img width="460" height="300" src="https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/main/3.JPG">
+  <img width="460" height="300" src="https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/main/3_1.JPG">
 </p>
 
 If user attempts to exit iCare settings page without clicking "Save All Settings" an alert message is displayed as a pop-up prompting user to save (settings are then stored locally).
 
 <p align="center">
-  <img width="460" height="300" src="https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/main/4.JPG">
+  <img width="460" height="300" src="https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/main/4_1.JPG">
 </p>
 
 Youtube Kids functions normally until the _# of Videos_ counted by iCare exceeds the user-specified _# of Videos_ (based on saved settings).
