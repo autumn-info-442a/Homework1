@@ -62,7 +62,7 @@ Youtube Kids functions normally until the _# of Videos_ counted by iCare exceeds
   <img width="460" height="300" src="https://raw.githubusercontent.com/autumn-info-442a/Team-iCare/HW2/wireframeV2_d.JPG">
 </p>
 
-When user has exceeded the _# of Videos_ counted by iCare exceeds the user-specified _# of Videos_ setting a message is displayed as a pop-up over the Youtube Kids video. The message will be randomly selected pool of saved pre-made message(s) or custom message(s) in local storage.
+When user has exceeded the _# of Videos_ counted by iCare exceeds the user-specified _# of Videos_ setting a message is displayed as a pop-up over the Youtube Kids video. The message will be randomly selected from the pool of saved pre-made message(s) or custom message(s) in local storage.
 
 **All messages will display for 15 seconds**. The timer will count down from 15-0, when 15 seconds have elasped the "Close" button will become enabled for user to click.
 <p align="center">
