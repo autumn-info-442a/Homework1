@@ -22,8 +22,12 @@
 - [S3] The settings page must display threshold settings
 - [S4] Users must be able to pick and choose pools/categories of messages
 - [S5] Users must be able to see each message within a pool/category
-- [S6] Users must be able to enable/disable individual messages within a pool/category
-- [S7] There must be a minimum of one message enabled across all pools (including custom messages)
+- [S6] All messages within each enabled category must be enabled by default
+- [S7] Users must be able to enable/disable individual messages within a pool/category
+- [S8] There must be a minimum of one message enabled across all pools (including custom messages)
+- [S9] User settings must be saved when the “Save” button is pressed 
+- [S10] User settings must be saved onto the Chrome extension’s local storage
+- [S11] Alert must be displayed if/when settings fail to save
 
 ### Custom Messages [C]
 - [C1] Users must be able to add their own custom message
@@ -41,9 +45,6 @@
 ### Watch Threshold [W]
 - [W1] User must be able to set the videos watched threshold to display a message
 - [W2] Videos watched threshold must range from 1 to 5 videos
-- [W3] User settings must be saved when the “Save” button is pressed 
-- [W4] User settings must be saved onto the Chrome extension’s local storage
-- [W5] Alert must be displayed if/when settings fail to save
 
 ## Messages
 
