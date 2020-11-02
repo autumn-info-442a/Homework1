@@ -30,3 +30,21 @@
     - The ***MonitorModel*** will notify the ***MessageModel*** if the “videos watched” threshold has been met
 - The ***MessageModel*** can communicate with the ***SettingsModel***
     - The ***SettingsModel*** can provide the ***MessageModel*** with a random message
+
+## MessageView
+- This component functions as a display for a randomly selected message and time remaining.
+- The ***MessageView*** can communicate with the ***MessageModel***
+    - The ***MessageModel*** can provide the ***MessageView*** with a random message to display
+    - The ***MessageModel*** can provide the ***MessageView*** with the time remaining
+    
+## SettingsController
+- This component allows the user to input the desired message pool, video watched threshold, and custom message. 
+- The ***SettingsController*** communicates with the ***SettingsModel***
+    - The ***SettingsModel*** sends the ***SettingsController*** all of the current settings and data (selected message categories, watch time threshold, and all premade/custom messages)
+- The ***SettingsController*** communicates with the ***SettingsView***
+    - The ***SettingsView*** sends the ***SettingsController*** a new custom message if one has been added
+    - The ***SettingsView*** notifies the ***SettingsController*** if a custom message has been removed and which one
+    - The ***SettingsView*** notifies the ***SettingsController*** if a custom message has been edited and which one (along with the new edited message)
+    - The ***SettingsView*** notifies the ***SettingsController*** if the “videos watched” threshold has been changed
+    - The ***SettingsView*** notifies the ***SettingsController*** if a premade message has been enabled/disabled
+    - The ***SettingsView*** notifies the ***SettingsController*** if a category has been enabled/disabled
