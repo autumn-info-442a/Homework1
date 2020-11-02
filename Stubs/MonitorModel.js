@@ -9,3 +9,12 @@ function messageFinished() {
 function newThreshold(threshold) {
   // TODO set current threshold to new threshold
 }
+
+// pre: user has watched a new video
+// post: watch count is incremented by one
+function updateWatchCount() {
+  // TODO functionality to increment watch count and display message if threshold is met
+  if (threshold met) {
+    MessageModel.whenThresholdMet();
+  }
+}
