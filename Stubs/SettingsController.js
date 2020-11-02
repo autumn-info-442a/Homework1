@@ -1,68 +1,50 @@
-(function() {
+// pre: no input
+// post: returns all settings as JSON
+function getSettings() {
+  // TODO additional functionality in retrieving and returning settings
+  return SettingsModel.getCurrentSettingsandData();
+}
 
-  // SettingsModel
+// The following functions will be called by SettingsView when needed
 
-  // pre: no inputs
-  // post: list of enabled categories
-  function getMessageCategory() {
-    // TODO functionality to get enabled message categories
-    return ["Message category"]; 
-  }
+// pre: accepts message to be added as input
+// post: message is added
+function addMessage(message) {
+  // TODO functionality to read and add custom message incl error handling incl error handling
+  SettingsModel.addMessage();
+}
 
-  // pre: no inputs
-  // post: list of custom messages
-  function getCustomMessages() {
-    // TODO functionality to compile list of custom messages
-    return ["custom message"];
-  }
+// pre: accepts message to be removed as input
+// post: message is removed
+function removeMessage(message) {
+  // TODO functionality to remove a message incl error handling
+  SettingsModel.removeMessage();
+}
 
-  // pre: no inputs
-  // post: list of enabled premade messages
-  function getPremadeMessages() {
-    // TODO functionality to compile list of enabled premade messages
-    return ["premade message"];
-  }
+// pre: accepts a message to be edited (message1) and the new text (message2) as input
+// post: message is updated/edited
+function editMessage(message1, message2) {
+  // TODO functionality to edit a message incl error handling
+  SettingsModel.editMessage(message1, message2);
+}
 
-  // pre: no inputs
-  // post: current watch threshold (1-5)
-  function getWatchThreshold() {
-    // TODO functionality to retrieve current watch threshold
-    return threshold;
-  }
+// pre: a new watch threshold (1-5) to be added as input
+// post: watch threshold is updated
+function updateWatchThreshold(videos) {
+  // TODO functionality to update threshold incl error handling
+  SettingsModel.updateWatchThreshold();
+}
 
-  // SettingsView
+// pre: a currently existing premade message
+// post: message status is toggled
+function updatePremadeMessage(message) {
+  // TODO functionality to toggle status of a message incl error handling
+  SettingsModel.updatePremadeMessage();
+}
 
-  // pre: message to be added
-  // post: true if success; false if failed
-  function addMessage(message) {
-    // TODO functionality to read and add custom message
-    return true;
-  }
-
-  // pre: message to be removed
-  // post: true if success; false if failed
-  function removeMessage(message) {
-    // TODO functionality to remove a message
-    return true;
-  }
-
-  // pre: message to be edited (message1) and the new text (message2)
-  // post: true if success; false if failed
-  function editMessage(message1, message2) {
-    // TODO functionality to edit a message
-    return true;
-  }
-
-  // pre: new watch threshold (1-5)
-  // post: none
-  function updateWatchThreshold(videos) {
-    // TODO functionality to update threshold
-  }
-
-  // pre: message
-  // post: true if success; false if failed
-  function updatePremadeMessage(message) {
-    // TODO functionality to toggle status of a message
-    return true;
-  }
-})();
+// pre: accepts a category to be toggled
+// post: category status is changed
+function updateCategory(category) {
+  // TODO functionality to toggle status of a category incl error handling
+  SettingsModel.updateCategory();
+}
