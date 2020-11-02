@@ -9,7 +9,7 @@
     - The ***SettingsModel*** can notify the ***MonitorModel*** with a change to the “videos watched” threshold
 
 ## SettingsModel
-- This is a component that stores all the messages (pre-made and custom messages) and settings. The setting data includes
+- This is a component that stores all the messages (pre-made and custom messages) and settings. The setting data includes:
     - Type of message displayed
     - Video watched threshold 
 - The ***SettingsModel*** can communicate with the ***MonitorModel***
