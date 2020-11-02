@@ -23,3 +23,10 @@
     - The ***SettingsController*** can send to the ***SettingsModel*** an addition to the custom messages
     - The ***SettingsController*** can notify the ***SettingsModel*** that there is a removal in the custom messages
     - The ***SettingsController*** can notify the ***SettingsModel*** that there is an update to a custom message.
+
+## MessageModel
+- This is a component that picks a random message to display and tracks the amount of time left for that message.
+- The ***MessageModel*** can communicate with the ***MonitorModel***
+    - The ***MonitorModel*** will notify the ***MessageModel*** if the “videos watched” threshold has been met
+- The ***MessageModel*** can communicate with the ***SettingsModel***
+    - The ***SettingsModel*** can provide the ***MessageModel*** with a random message
