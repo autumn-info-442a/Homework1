@@ -48,3 +48,11 @@
     - The ***SettingsView*** notifies the ***SettingsController*** if the “videos watched” threshold has been changed
     - The ***SettingsView*** notifies the ***SettingsController*** if a premade message has been enabled/disabled
     - The ***SettingsView*** notifies the ***SettingsController*** if a category has been enabled/disabled
+
+## SettingsView
+- This is a component that displays all of the user settings and premade/custom messages. The user is also able to adjust their settings on this view.
+- The ***SettingsView*** communicates with the ***SettingsController***
+    - The ***SettingsController*** sends the ***SettingsView*** the message category settings
+    - The ***SettingsController*** sends the ***SettingsView*** a list of custom messages
+    - The ***SettingsController*** sends the ***SettingsView*** a list of premade messages and their status
+    - The ***SettingsController*** sends the ***SettingsView*** the current “videos watched” threshold
