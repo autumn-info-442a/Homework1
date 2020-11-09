@@ -35,7 +35,7 @@
 - [C3] Users must be able to view their custom messages
 - [C4] Users must be able to edit their custom messages
 - [C5] Users must be able to remove their own custom messages
-- [C6] Users must be able to set a maximum 15 of custom messages
+- [C6] Users must be able to set a maximum of 15 custom messages
 - [C7] Users must not be able to add an empty message
 - [C8] A warning/alert must be displayed if the user attempts to add an empty message
 - [C9] Custom messages must all belong to the same category
