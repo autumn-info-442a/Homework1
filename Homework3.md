@@ -52,12 +52,11 @@
 - [V1] Messages must overlay on top of the video in standard view
 - [V2] Messages must overlay on top of the video in full screen view
 - [V3] The extension tracks total videos watched since the last message was displayed
-- [V4] iCare message must be displayed on an overlay on top of the YouTube video
-- [V5] The message must be centered on the overlay
-- [V6] The size of the overlay must cover the entire YouTube video
-- [V7] The overlay must resize itself when the size of the YouTube player changes
-- [V8] There must be a timer displaying the time remaining (in seconds) on the message overlay
-- [V9] The timer displayed must be counting down towards zero
+- [V4] The message must be centered on the overlay
+- [V5] The size of the overlay must cover the entire YouTube video
+- [V6] The overlay must resize itself when the size of the YouTube player changes
+- [V7] There must be a timer displaying the time remaining (in seconds) on the message overlay
+- [V8] The timer displayed must be counting down towards zero
 
 ### Functionality [F]
 - [F1] Each message and overlay must have a time duration of 15 seconds.
