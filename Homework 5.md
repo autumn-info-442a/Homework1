@@ -121,3 +121,38 @@ Inspections will occur Monday of each sprint at 3:30PM (PT), during our regular 
 [E8] Clicking outside of the extension's popup (onto the browser window) closes it
 - **Verification Process:** When the popup is shown, left-click anywhere outside the popup window and see if the pop-up disappears
 
+### Settings [S]
+All visual/interaction testing will take place on the Settings HTML page.
+
+[S1] The settings page must display the categories of messages
+- **Verification Process:** Check the settings page and see if there is a section for displaying the categories of messages “Motivational”, “Screen Time”, “Exercise”, “Custom”.
+
+[S2] The settings page must have a section for displaying a list of custom messages 
+- **Verification Process:** Check the settings page and see if there is a section for displaying all the previously entered custom messages
+
+[S3] The settings page must display threshold settings
+- **Verification Process:** Check the setting page and see if there is a section for displaying the current watch threshold and entering a new threshold
+
+[S4] Users must be able to pick and choose pools/categories of messages
+- **Verification Process:** Check the setting page and see if there is a section for checking/unchecking the categories of messages on the top right corner. Check to see if the radio buttons are clickable and responsive to inputs by selecting/deselecting “Set Messages” radio buttons. Then watch YouTube videos until a message is displayed and see if it is contained in those pools. Additionally, we can check the local storage to view the saved messages before and after.
+
+[S5] Users must be able to see each message within a pool/category
+- **Verification Process:** Open iCare settings page. Under Set Messages select “Motivational” and “Custom” (deselect all other categories). Add at least 1 custom message (i.e. “Test”). Check to ensure “Pre-Made Messages” and “Custom Messages” tables then display tables of corresponding messages.
+
+[S6] All messages within each enabled category must be enabled by default
+- **Verification Process:** After installing the extension, enable all categories of messages. Within the table of “Pre-Made Messages” check if all the messages have “show” selected.
+
+[S7] Users must be able to enable/disable individual messages within a pool/category
+- **Verification Process:** Check the setting page and see if the user can toggle (either checked or unchecked) each individual message within each category by selecting/deselecting “Show” radio button. Next, check the settings storage to see if the enabled/disabled messages list has updated to reflect the user’s changes.
+
+[S8] There must be a minimum of one message enabled across all pools (including custom messages)
+- **Verification Process:** When a user tries to disable all categories of messages, the app will not allow the user to uncheck the only categories that are enabled. At the same time, the app will show a warning message saying “Please select at least one category in “Set Messages.”
+
+[S9] User settings must be saved when the “Save” button is pressed
+- **Verification Process:** Make adjustments on the settings page such as adjusting the watch threshold and then click the “Save” button. Check local storage and see if the changes are saved.
+
+[S10] User settings must be saved onto the Chrome extension’s local storage
+- **Verification Process:** We are not testing this because it is more of an implementation decision. Unless we change our project, anything we save will have to use Chrome’s extension storage.
+
+[S11] Alert must be displayed if/when settings fail to save
+- **Verification Process:** Inspect the function that is responsible for saving the settings and verify that it contains logic to display an alert when the settings fail to properly save.
