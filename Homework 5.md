@@ -43,3 +43,32 @@ We will use Github Issues in order to track project milestones and issues
     - ExtensionPopup
         - Owner: Spencer
         - Sam will assist
+
+## What is your timeline?
+We will use 1 week sprints to plan a timeline for weeks 6-10. Sprints start on Mondays of each week and end on Sunday night. Specific tasks will be delegated during team meetings on Monday.
+- Week 6 (11/9 - 11/15)
+    - Having monitorModel being able to track video count and reset it after the message is shown
+    - Having monitorModel being able to talk with Message Model 
+    - Display an overlay on a YouTube video
+    - Set up initial settings menu
+    
+- Week 7 (11/16-11/22)
+    - Having YouTube Overlay responsive to screen size 
+    - Having monitorModel being able to receive threshold update from SettingsModel
+    - Add premade messages to settings
+    
+- Week 8 (11/23-11/29)
+    - Display a functional overlay with message, timer, and close button (enable after the timer is out) 
+    - Add functionality to stop YouTube videos from playing
+    - Have settings for custom messages
+    - Have the CSS for the overlay ready
+    
+- Week 9 (11/30-12/6)
+    - Implement missing features from previous weeks
+    - Fix major bugs
+    
+- Week 10 (12/7-12/11)
+    - Fix minor bugs + fine tuning
+    - Upload the extension to Google Extension Store and have it ready for download
+
+
