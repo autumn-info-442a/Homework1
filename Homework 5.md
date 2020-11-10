@@ -156,3 +156,48 @@ All visual/interaction testing will take place on the Settings HTML page.
 
 [S11] Alert must be displayed if/when settings fail to save
 - **Verification Process:** Inspect the function that is responsible for saving the settings and verify that it contains logic to display an alert when the settings fail to properly save.
+
+### Custom Messages [C]
+All visual/interaction testing will take place on the Settings HTML page.
+
+[C1] Users must be able to add their own custom message
+- **Verification Process:** Add a custom message and then see if it shows up in the custom messages table. Additionally, check to see if the local storage contains the message.
+
+[C2] Users must be able to add multiple custom messages
+- **Verification Process:** Add multiple messages and make sure they all display in the custom messages table and show up in the local storage.
+
+[C3] Users must be able to view their custom messages
+- **Verification Process:** Add a message and make sure it displays as it was written.
+
+[C4] Users must be able to edit their custom messages
+- **Verification Process:** Edit a message and make sure the corresponding row in the table updates to reflect it (along with checking the storage).
+
+[C5] Users must be able to remove their own custom messages
+- **Verification Process:** Remove the message and make sure the custom messages table no longer shows it and verify that on the local storage it is removed.
+
+[C6] Users must be able to set a maximum of 15 custom messages
+- **Verification Process:** Add messages one at a time up to 15. Check to see if adding an additional one fails or is prevented from being added in the first place.
+
+[C7] Users must not be able to add an empty message
+- **Verification Process:** Try to add an empty message, we expect an error alert to appear. If an empty message shows up in the storage, then the requirement is not met.
+
+[C8] A warning/alert must be displayed if the user attempts to add an empty message
+- See [C7]
+
+[C9] Custom messages must all belong to the same category
+- **Verification Process:** Disable custom messages and check to see if any of the custom messages are enabled by running a function that retrieves a random message for an x number of times. If any custom messages appear, then the requirement is not met.
+
+[C10] Custom messages must be able to be saved by clicking the “add” button
+- **Verification Process:** After entering a custom message and clicking “add”, check the local storage to see if the message is contained in there.
+
+[C11] All messages must have a character limit of 50
+- **Verification Process:** Adding a message with more than 50 characters should expect an error alert. Having one not show up (and having the message show up in the storage) means the requirement is not met.
+
+### Watch Threshold [W]:
+[W1] User must be able to set the videos watched threshold for displaying a message
+- **Verification Process:** Run the iCare extension, open settings window, and adjust Message Frequency dropdown to 1. Click save settings and close the iCare settings window. Exit Chrome browser and open new Chrome browser.
+- **Inspection:** Open iCare extension, open settings window, and check to ensure 2 is the selected/displayed value for Message Frequency. Additionally, watch enough YouTube Kids videos to meet the threshold and prompt a message to appear. Repeat for all other Message Frequency values (2-5).
+
+[W2] Videos watched threshold must range from 1 to 5 videos
+- **Verification Process:** Run the iCare extension and open settings window. Click Message Frequency dropdown.
+- **Inspection:** Check to ensure dropdown values range from 1-5 (integer).
