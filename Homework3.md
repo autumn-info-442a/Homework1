@@ -57,6 +57,7 @@
 - [V6] The overlay must resize itself when the size of the YouTube player changes
 - [V7] There must be a timer displaying the time remaining (in seconds) on the message overlay
 - [V8] The timer displayed must be counting down towards zero
+- [V9] The close button visually must show clear indication about its state (either clickable or unclickable) 
 
 ### Functionality [F]
 - [F1] Each message and overlay must have a time duration of 15 seconds.
