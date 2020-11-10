@@ -95,3 +95,21 @@ Inspections will occur Monday of each sprint at 3:30PM (PT), during our regular 
     
 [G4] The font displayed will be in Arial
 - **Verification Process:** Check the font displayed in the home screen, settings, pre-message, custom message, warnings, and the pop up screen should be in Arial.
+
+### Extension Pop-up [E]:
+[E1] Extension icon displays in the extension toolbar on the top right corner of the browser
+- **Verification Process:** Check if there is our app icon in the extension toolbar (Look at the rectangle icon with a heart in the middle (pink))
+[E2] Extension icon must match the iCare logo
+- **Verification Process:** After installing the iCare app, check if the extension icon matches the iCare logo.
+[E3] Left-clicking extension icon on the extension toolbar must open the extension’s popup window
+- **Verification Process:** After left-clicking the extension icon, the pop-up will show up right under the extension icon. 
+[E4] Extension popup must display a welcome message
+- **Verification Process:** Check if when we click the iCare extension in the toolbar, the welcome message of the iCare app shows up.
+[E5] Extension popup must display an “about” message explaining our purpose
+- **Verification Process:** When the iCare extension pop-up is open, check if the pop-up displays a message with text "Our mission is to help your children lead healthy lives with technology".
+[E6] Extension popup must display a "settings" button
+- **Verification Process:** When the iCare extension pop-up is open, check if the “Settings” button is displayed.
+[E7] Clicking the "settings" button redirects the user to a new HTML page
+- **Verification Process:** After left-clicking the “Settings” button, check if the user is redirected to iCare settings HTML page. 
+[E8] Clicking outside of the extension's popup (onto the browser window) closes it
+- **Verification Process:** When the popup is shown, left-click anywhere outside the popup window and see if the pop-up disappears. 
