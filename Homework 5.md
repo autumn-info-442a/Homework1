@@ -201,3 +201,6 @@ All visual/interaction testing will take place on the Settings HTML page.
 [W2] Videos watched threshold must range from 1 to 5 videos
 - **Verification Process:** Run the iCare extension and open settings window. Click Message Frequency dropdown.
 - **Inspection:** Check to ensure dropdown values range from 1-5 (integer).
+
+## Messages
+**General Verification Process:** Run iCare extension (save settings: Set Messages = Motivational, Message Frequency = 2, Add Custom Message = “Test” ), watch Youtubekids.com videos until an iCare message is displayed.
