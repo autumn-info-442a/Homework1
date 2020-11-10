@@ -202,5 +202,65 @@ All visual/interaction testing will take place on the Settings HTML page.
 - **Verification Process:** Run the iCare extension and open settings window. Click Message Frequency dropdown.
 - **Inspection:** Check to ensure dropdown values range from 1-5 (integer).
 
-## Messages
+## ***Messages***
 **General Verification Process:** Run iCare extension (save settings: Set Messages = Motivational, Message Frequency = 2, Add Custom Message = “Test” ), watch Youtubekids.com videos until an iCare message is displayed.
+
+### Visual [V]:
+[V1] Messages must overlay on top of the video in standard view
+- **Verification Process:** Begin with General Verification Process AND watch YoutubeKids in standard view. When an iCare message overlay displays, check to ensure overlay displays on top (in front) of and covers the entirety of the YoutubeKids video.
+
+[V2] Messages must overlay on top of the video in full screen view
+- **Verification Process:** Begin with General Verification Process AND watch YoutubeKids in full screen view. When an iCare message overlay displays, check to ensure overlay covers the entire screen.
+
+[V3] The extension tracks total videos watched since the last message was displayed
+- **Verification Process:** Begin with General Verification Process AND watch YoutubeKids in any view. After first message is displayed, check local storage to ensure # Videos Watched tracker has reset to 0. Also watch 2 more videos and check that a message is displayed after.
+
+[V4] The message must be centered on the overlay
+- **Verification Process:** Begin with General Verification Process AND watch YoutubeKids in standard view. When iCare message overlay displays check to ensure message text is centered in pop-up overlay. Repeat process with Youtubekids in full screen view.
+
+[V5] The size of the overlay must cover the entire YouTube video
+- **Verification Process:** Begin with General Verification Process AND watch YoutubeKids in standard view. When the iCare message overlay displays check to ensure the iCare message overlay covers the entire video player. Repeat process with Youtubekids in full screen view.
+
+[V6] The overlay must resize itself when the size of the YouTube player changes
+- **Verification Process:** Begin with General Verification Process AND watch YoutubeKids in standard view. When iCare message displays check to ensure message pop-up displays over the entire Youtube video. Change the browser window size and ensure the overlay still covers the YouTube video.
+
+[V7] There must be a timer displaying the time remaining (in seconds) on the message overlay
+- **Verification Process:** Begin with General Verification Process AND watch YoutubeKids in standard view. When iCare message overlay displays check to ensure timer is displayed in message overlay with a countdown from 15-0 (seconds) displays the time remaining (15, 14, 13 . . .). Repeat for Youtube Kids in full screen view.
+
+[V8] The timer displayed must be counting down towards zero
+- **Verification Process:**  Begin with General Verification Process AND watch YoutubeKids in standard view. When iCare message overlay displays check to ensure timer is displayed in message overlay with a countdown descending from 15 and ending with 0 (seconds) displayed in the upper right corner of pop-up. Repeat for Youtube Kids in full screen view.
+
+[V9] The close button visually must show clear indication about its state (either clickable or unclickable) 
+- **Verification Process:**  When the overlay shows up the button is greyed out. After the timer reached to 0, the color of button will turn into iCare’s theme color (which is very different from grey so user can easily recognize the change). 
+
+### Functionality [F]
+[F1] Each message and overlay must have a time duration of 15 seconds.
+- **Verification Process:** Begin with General Verification Process AND watch YoutubeKids. To pass the verification, the close overlay button must be enabled after exactly 15 seconds.
+
+[F2] iCare message overlay must show up after user exceeds the video count threshold that was saved in the settings
+- **Verification Process:** Begin with General Verification Process AND watch YoutubeKids. The verification fails if no overlay appears. Additionally, write a testing function that checks if a display function is called when the threshold is met.
+
+[F3] The videos watched threshold must reset after the overlay is activated
+- **Verification Process:** Write a testing function that retrieves the current video watch count before and after the overlay is activated. If the watch count is not as expected, then it fails.
+
+[F4] The overlay must pause the currently playing video
+- **Verification Process:** Begin with General Verification Process AND watch YoutubeKids. Check to see if the video is paused when the overlay appears.
+
+[F5] User must be unable to play/unpause a video while the overlay is active
+- **Verification Process:** Same as above but try to play/unpause the video. If it is able to play/unpause, then the requirement has not been met.
+
+[F6] Refreshing the browser removes the current instance of the iCare overlay
+- **Verification Process:**  Begin with General Verification Process AND watch YoutubeKids. Once the overlay has displayed, refresh the page before the timer reaches zero. If the overlay stays or appears again then the requirement has not been met.
+
+[F7] When the overlay shows up, it will randomly pick one of the messages from all the message pools selected in the settings
+- **Verification Process:** We will write a testing function that calls the display function and checks the displayed message against the current active categories of messages. It will change the enabled categories and verify that the message is only from the current active category.
+We will additionally conduct a code review to verify that the implementation of the message retrieval is random (maybe it makes use of random() or something like that).
+
+[F8] The randomly chosen message must be displayed on the overlay
+- **Verification Process:** Begin with General Verification Process AND watch YoutubeKids. Perform a visual inspection of the overlay to see that the message is displayed. Additionally, we can have the extension log the message to a console for the purposes of testing in addition to the visual inspection to verify that the displayed and random message match.
+
+[F9] The “close” button must be disabled until the timer reaches zero
+- **Verification Process:** Begin with General Verification Process AND watch YoutubeKids. Attempt to click the close button before the timer reaches zero. If it is clickable before the timer reaches zero, then the requirement has not been met.
+
+[F10] After the timer reaches zero, the user must be able to close the overlay
+- **Verification Process:** Same with above except close button must be clickable to close message overlay when the timer reaches zero.
