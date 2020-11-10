@@ -74,10 +74,12 @@ We will use 1 week sprints to plan a timeline for weeks 6-10. Sprints start on M
 ## How will you verify that you've met your requirements?
 We will create two separate branches: main and development. Before inspection, all codes will be committed into development branches and ready to be reviewed by every member of the team. After Monday’s code review and revision, we’ll merge the development branch into the main branch.
 
-Conducting Inspections
+**Conducting Inspections**
+
 All of our testing will be conducted manually mainly by the developer as well as every member of the team.
 
-Team Verifications
+**Team Verifications**
+
 Inspections will occur Monday of each sprint at 3:30PM (PT), during our regular scheduled class meetings. All group members will visually inspect code in the development branch and the owner will verify functionality via screen-share. Additional inspection may occur during our Wednesday, Friday, or ad-hoc meetings as needed.
 
 ### General [G]:
