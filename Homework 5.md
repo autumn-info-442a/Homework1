@@ -46,28 +46,28 @@ We will use Github Issues in order to track project milestones and issues
 
 ## What is your timeline?
 We will use 1 week sprints to plan a timeline for weeks 6-10. Sprints start on Mondays of each week and end on Sunday night. Specific tasks will be delegated during team meetings on Monday.
-- Week 6 (11/9 - 11/15)
+- ***Week 6 (11/9 - 11/15)***
     - Having monitorModel being able to track video count and reset it after the message is shown
     - Having monitorModel being able to talk with Message Model 
     - Display an overlay on a YouTube video
     - Set up initial settings menu
     
-- Week 7 (11/16-11/22)
+- ***Week 7 (11/16-11/22)***
     - Having YouTube Overlay responsive to screen size 
     - Having monitorModel being able to receive threshold update from SettingsModel
     - Add premade messages to settings
     
-- Week 8 (11/23-11/29)
+- ***Week 8 (11/23-11/29)***
     - Display a functional overlay with message, timer, and close button (enable after the timer is out) 
     - Add functionality to stop YouTube videos from playing
     - Have settings for custom messages
     - Have the CSS for the overlay ready
     
-- Week 9 (11/30-12/6)
+- ***Week 9 (11/30-12/6)***
     - Implement missing features from previous weeks
     - Fix major bugs
     
-- Week 10 (12/7-12/11)
+- ***Week 10 (12/7-12/11)***
     - Fix minor bugs + fine tuning
     - Upload the extension to Google Extension Store and have it ready for download
 
@@ -86,9 +86,12 @@ Inspections will occur Monday of each sprint at 3:30PM (PT), during our regular 
 [G1] Extension must be compatible with Chrome browsers (version 86.0.4240.111) running on Windows desktop computers
     - Verification Process: Check if the extension can be installed in the Chrome browser on a computer using Windows OS without errors from the browser. 
     - Inspection: If iCare extension successfully installs, we define this as meeting requirement G1.
+    
 [G2] Extension must be responsive to all browser window sizes
     - Verification Process: We are not testing this one as it is covered under other more specific requirements in the Visuals section.
+    
 [G3] All text must be displayed in American English
     - Verification Process: Check the language displayed in the home screen, settings, pre-message, warnings, and the pop up screen should be in American English.
+    
 [G4] The font displayed will be in Arial
     - Verification Process: Check the font displayed in the home screen, settings, pre-message, custom message, warnings, and the pop up screen should be in Arial.
