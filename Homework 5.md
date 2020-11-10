@@ -83,19 +83,15 @@ All of our testing will be conducted manually mainly by the developer as well as
 Inspections will occur Monday of each sprint at 3:30PM (PT), during our regular scheduled class meetings. All group members will visually inspect code in the development branch and the owner will verify functionality via screen-share. Additional inspection may occur during our Wednesday, Friday, or ad-hoc meetings as needed.
 
 ### General [G]:
-[G1] Extension must be compatible with Chrome browsers (version 86.0.4240.111) running on Windows desktop computers
-
+- [G1] Extension must be compatible with Chrome browsers (version 86.0.4240.111) running on Windows desktop computers
     - **Verification Process:** Check if the extension can be installed in the Chrome browser on a computer using Windows OS without errors from the browser. 
     - **Inspection:** If iCare extension successfully installs, we define this as meeting requirement G1.
     
-[G2] Extension must be responsive to all browser window sizes
-
+- [G2] Extension must be responsive to all browser window sizes
     - **Verification Process:** We are not testing this one as it is covered under other more specific requirements in the Visuals section.
     
-[G3] All text must be displayed in American English
-
+- [G3] All text must be displayed in American English
     - **Verification Process:** Check the language displayed in the home screen, settings, pre-message, warnings, and the pop up screen should be in American English.
     
-[G4] The font displayed will be in Arial
-
+- [G4] The font displayed will be in Arial
     - **Verification Process:** Check the font displayed in the home screen, settings, pre-message, custom message, warnings, and the pop up screen should be in Arial.
