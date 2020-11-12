@@ -27,8 +27,7 @@
 - The ***MessageController*** can communicate with the ***SettingsController***
     - The ***SettingsController*** can provide the ***MessageController*** with a random message
 - The ***MessageView*** can communicate with the ***MessageController***
-    - The ***MessageController*** can provide the ***MessageView*** with a random message to display
-    - The ***MessageController*** can provide the ***MessageView*** with the time remaining
+    - The ***MessageController*** can notify the ***MessageView*** to display itself with appropriate settings
 
 ## MessageView
 - This component functions as a display for a randomly selected message and time remaining
@@ -39,10 +38,7 @@
 - The ***SettingsController*** communicates with the ***SettingsModel***
     - The ***SettingsModel*** sends the ***SettingsController*** all of the current settings and data (selected message categories, watch time threshold, and all premade/custom messages)
 - The ***SettingsView*** communicates with the ***SettingsController***
-    - The ***SettingsController*** sends the ***SettingsView*** the message category settings
-    - The ***SettingsController*** sends the ***SettingsView*** a list of custom messages
-    - The ***SettingsController*** sends the ***SettingsView*** a list of premade messages and their status
-    - The ***SettingsController*** sends the ***SettingsView*** the current “videos watched” threshold
+    - The ***SettingsController*** can notify the ***SettingsView*** to display itself with appropriate settings
 
 ## SettingsView
 - This is a component that displays all of the user settings and premade/custom messages. The user is also able to adjust their settings on this view

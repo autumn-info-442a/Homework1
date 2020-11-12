@@ -15,7 +15,7 @@ function getCurrentSettingsAndData() {
 // pre: no input 
 // post: returns the current watch threshold
 function getThreshold() {
-// TODO: Update the newThreshold value to the MonitorModel 
+// TODO: Update the newThreshold value to the MonitorController
   return threshold;
 }
 
@@ -24,12 +24,6 @@ function getThreshold() {
 function displaySettings() {
   // TODO functionality to parse and display settings
   // This function interacts with SettingsView to display the page with appropriate data
-}
-
-// pre: some settings have been changed
-// post: settings are saved
-function saveSettings() {
-  // TODO functionality to save settings
 }
 
 // pre: accepts message to be added as input

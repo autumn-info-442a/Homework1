@@ -13,19 +13,6 @@ function trackTime() {
   MonitorController.messsageFinished();
 }
 
-// pre: no inputs
-// post: current time is returned
-function getTime() {
-  // TODO any additional functionality in returning the time
-  return currentTime;
-}
-
-// pre: no input
-// post: returns the current random message
-function getRandomMessage() {
-  return randomMessage;
-}
-
 // pre: no input 
 // post: append the iCare Overlay on top of the Youtube video
 function appendiCareOverlay() {
