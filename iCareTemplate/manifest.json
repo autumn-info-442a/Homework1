@@ -1,0 +1,21 @@
+{
+    "name" : "iCare",
+    "version": "1.0.0",
+    "manifest_version": 2,
+    "description": "An extention for moderating teen Youtube usage.",
+    "content_scripts": [
+        {
+            "matches": ["*://www.youtubekids.com/*"],
+            "js": ["content.js"]
+        }
+    ], 
+    "background": {
+        "scripts": ["background.js"]
+    },
+    "browser_action": {
+        "default_title": "iCare",
+        "default_icon": "iCare_Logo_1_small.png"
+    },
+    "permissions": ["activeTab"],
+    "options": "popup.html"
+}
