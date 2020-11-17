@@ -14,8 +14,9 @@
     },
     "browser_action": {
         "default_title": "iCare",
-        "default_icon": "./img/iCare_Logo_1_small.png"
+        "default_icon": "./img/iCare_Logo_1_small.png",
+        "default_popup": "./pop-up/popup.html"
     },
     "permissions": ["activeTab"],
-    "options": "popup.html"
+    "options": "./pop-up/popup.html"
 }
