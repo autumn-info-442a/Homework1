@@ -3,16 +3,62 @@
 
     window.addEventListener("load", initialize());
 
+    function initialize() {
+
+    }
+
+    // pre: no inputs
+    // post: all settings are displayed
+    function displaySettings() {
+        // TODO functionality to parse and display settings
+        // This function interacts with SettingsView to display the page with appropriate data
+    }
+    
+    // pre: accepts message to be added as input
+    // post: message is added
+    function addMessage(message) {
+    // TODO functionality to read and add custom message incl error handling incl error handling
+    }
+    
+    // pre: accepts message to be removed as input
+    // post: message is removed
+    function removeMessage(message) {
+        // TODO functionality to remove a message incl error handling
+    }
+    
+    // pre: accepts a message to be edited (message1) and the new text (message2) as input
+    // post: message is updated/edited
+    function editMessage(message1, message2) {
+        // TODO functionality to edit a message incl error handling
+    }
+    
+    // pre: a new watch threshold (1-5) to be added as input
+    // post: watch threshold is updated
+    function updateWatchThreshold(videos) {
+        // TODO functionality to update threshold incl error handling
+    }
+    
+    // pre: a currently existing premade message
+    // post: message status is toggled
+    function updatePremadeMessage(message) {
+        // TODO functionality to toggle status of a message incl error handling
+    }
+    
+    // pre: accepts a category to be toggled
+    // post: category status is changed
+    function updateCategory(category) {
+        // TODO functionality to toggle status of a category incl error handling
+    }
+
     /**
-   * Helper function to find an element by its id
-   * @param {string} id - The id of the element
-   * @returns {object} - the element given by the id
-   */
+     * Helper function to find an element by its id
+     * @param {string} id - The id of the element
+     * @returns {object} - the element given by the id
+     */
     function $(id) {
         return document.getElementById(id);
     }
 })();
-
 
 // pre: no input 
 // post: return a Random message 
@@ -35,45 +81,3 @@ function getThreshold() {
     return threshold;
 }
   
-// pre: no inputs
-// post: all settings are displayed
-function displaySettings() {
-    // TODO functionality to parse and display settings
-    // This function interacts with SettingsView to display the page with appropriate data
-}
-  
-  // pre: accepts message to be added as input
-  // post: message is added
-function addMessage(message) {
-   // TODO functionality to read and add custom message incl error handling incl error handling
-}
-  
-  // pre: accepts message to be removed as input
-  // post: message is removed
-function removeMessage(message) {
-    // TODO functionality to remove a message incl error handling
-}
-  
-  // pre: accepts a message to be edited (message1) and the new text (message2) as input
-  // post: message is updated/edited
-function editMessage(message1, message2) {
-    // TODO functionality to edit a message incl error handling
-}
-  
-  // pre: a new watch threshold (1-5) to be added as input
-  // post: watch threshold is updated
-function updateWatchThreshold(videos) {
-    // TODO functionality to update threshold incl error handling
-}
-  
-  // pre: a currently existing premade message
-  // post: message status is toggled
-function updatePremadeMessage(message) {
-    // TODO functionality to toggle status of a message incl error handling
-}
-  
-// pre: accepts a category to be toggled
-// post: category status is changed
-function updateCategory(category) {
-    // TODO functionality to toggle status of a category incl error handling
-}
