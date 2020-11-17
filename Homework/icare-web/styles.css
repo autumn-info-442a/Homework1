@@ -6,7 +6,7 @@ h1,h3 {
 h1 { color: white; }
 
 button {
-    background-color: red;
+    background-color: #D13134;
     border: none;
     color: white;
     font-weight: bold;
@@ -15,14 +15,17 @@ button {
     padding: 10px 25px;
 }
 
+img {
+    margin-top: 2rem;
+}
+
 .center {
     display: flex;
     justify-content: center;
-    margin: 2rem;
 }
 
 .box {
-    height: 470px;
-    width: 450px;
-    background-color: #FFB6C1;
+    height: 370px;
+    width: 320px;
+    background-color: #F48D97;
 }
