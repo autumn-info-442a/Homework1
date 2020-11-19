@@ -2,62 +2,89 @@
 <html lang="en">
   <head>
     <title>Settings</title>
+
     <meta charset="UTF-8">
     <script src="settingsController.js"></script>
     <link rel="stylesheet" href="settingsView.css">
   </head>
-  <body>
-    <header>
-      <h1>Settings</h1>
+  <body class="background">
+    <header class="container">
+        <img src="./img/LogoMakr-3issad.png" alt="Logo">
+        <h1>Settings</h1>
     </header>
-    <main>
-      <div id="categories">
-        <h2>Set Messages</h2>
-        <input type="checkbox" id="motivational" value="motivational">
-        <label for="motivational">Motivational</label>
-        <input type="checkbox" id="screentime" value="screentime">
-        <label for="screentime">Screen Time</label>
-        <input type="checkbox" id="exercise" value="exercise">
-        <label for="exercise">Exercise</label>
-        <input type="checkbox" id="custom" value="custom">
-        <label for="custom">Custom Messages</label>
+
+    <main class="container">
+      <div>
+        <div id="categories">
+          <h2>Set Messages</h2>
+          <div>
+            <input type="checkbox" id="motivational" value="motivational">
+            <label for="motivational">Motivational</label>
+          </div>
+
+          <div>
+            <input type="checkbox" id="screentime" value="screentime">
+            <label for="screentime">Screen Time</label>
+          </div>
+
+          <div>
+            <input type="checkbox" id="exercise" value="exercise">
+            <label for="exercise">Exercise</label>
+          </div>
+
+          <div>
+            <input type="checkbox" id="custom" value="custom">
+            <label for="custom">Custom Messages</label>
+          </div>
+        </div>
+
+        <div id="frequency">
+          <h2>Message Frequency</h2>
+          <select name="threshold" id="threshold">
+            <option value="" disabled selected hidden># of Videos</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </div>
       </div>
-      <div id="frequency">
-        <h2>Message Frequency</h2>
-        <select name="threshold" id="threshold">
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-        </select>
+
+      <div>
+        <div id="premade">
+          <h2>Pre-made Messages</h2>
+          <table id="premade_table">
+            <tr>
+              <th>Message</th>
+              <th>Show?</th>
+            </tr>
+            <!-- We can have messages be populated using JS -->
+            <tr>
+              <td>This is a sample message</td>
+              <td class="premade_message">
+                <input type="checkbox" name="show_premade" value="show" checked>
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <div id="custom-messages">
+          <h2>Custom Messages</h2>
+          <input placeholder="Custom Message" type="text" id="new_message" name="new_message">
+          <button onclick="addMessage()" id="add">Add</button>
+          <!-- <input type="button" onclick="addMessage()" id="add"> -->
+          <table id="custom_table">
+              <!-- s will be added using JS with class "custom_message" -->
+          </table>
+        </div>
       </div>
-      <div id="premade">
-        <h2>Pre-made Messages</h2>
-        <table id="premade_table">
-          <tr>
-            <th>Message</th>
-            <th>Show?</th>
-          </tr>
-          <!-- We can have messages be populated using JS -->
-          <tr>
-            <td>This is a sample message</td>
-            <td class="premade_message">
-              <input type="checkbox" name="show_premade" value="show" checked>
-            </td>
-          </tr>
-        </table>
-      </div>
-      <div id="custom">
-        <h2>Custom Messages</h2>
-        <input type="text" id="new_message" name="new_message">
-        <input type="button" onclick="addMessage()" id="add">
-        <table id="custom_table">
-            <!-- Rows will be added using JS with class "custom_message" -->
-        </table>
-      </div>
+    </main>
+
+    <div class="container">
       <button type="button" id="save" onclick="save()">Save all Settings</button>
       <!-- button function pending -->
-    </main>
+    </div>
+
   </body>
 </html>
