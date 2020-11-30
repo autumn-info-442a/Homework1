@@ -16,7 +16,7 @@
         "default_title": "iCare",
         "default_icon": "./img/iCare_Logo_1_small.png"
     },
-    "permissions": ["activeTab"],
+    "permissions": ["activeTab", "storage"],
     "options": "popup.html",
     "options_page": "settingsView.html"
 }
