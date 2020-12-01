@@ -4,7 +4,7 @@
     window.addEventListener("load", initialize());
 
     function initialize() {
-
+        $("add").addEventListener("click", addMessage());
     }
 
     // pre: no inputs
