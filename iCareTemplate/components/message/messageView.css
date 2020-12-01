@@ -1,0 +1,68 @@
+body {
+    background-color: #F48D97;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    display: flex;
+    justify-content: center;
+
+}
+
+h1 {
+    color: white;
+}
+
+.top-icons {
+    position: relative;
+}
+
+.icare-logo-container {
+    position: absolute;
+    left: -400px;
+    top: 10px;
+}
+
+.icare-logo-container img {
+    width: 5em;
+    height: 4em;
+}
+
+.timer-container {
+    position: absolute;
+    top: 10px;
+    right: -25rem;
+    width: 6em;
+}
+
+.timer-container img {
+    width: 4em;
+    height: 4em;
+}
+
+.timer-container .timer-count {
+    font-size: xx-large;
+    position: absolute;
+    top: 1rem;
+    margin-left: 1rem;
+}
+
+.message-container {
+    margin-top: 8rem;
+    display: flex;
+    justify-content: center;
+    font-size: xx-large;
+    color: white;
+    flex-wrap: wrap;
+    max-width: 600;
+}
+
+.close-button {
+    display: flex;
+    margin-top: 8rem;
+    margin-left: 13rem;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+}
