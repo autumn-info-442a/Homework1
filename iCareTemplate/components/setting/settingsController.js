@@ -73,7 +73,12 @@
     // pre: a new watch threshold (1-5) to be added as input
     // post: watch threshold is updated
     function updateWatchThreshold(videos) {
-        // TODO functionality to update threshold incl error handling
+        var threshold_value = document.getElementById("threshold").value;
+        chrome.storage.local.set({"Threshold": threshold_value}, function() {
+          console.log('Value is set to ' + value);
+        });
+        //TODO error handling?
+        //TODO ensure storage permission enabled in extension manifest?
     }
     
     // pre: a currently existing premade message
