@@ -1,10 +1,11 @@
 (function() {
     "use strict";
 
-    window.addEventListener("load", initialize());
+    window.addEventListener("load", initialize);
 
     function initialize() {
-        $("add").addEventListener("click", addMessage());
+        $("add").addEventListener("click", addMessage);
+        chrome.storage.local.set({"custom": []}); // purely for testing, remove later
     }
 
     // pre: no inputs
@@ -31,9 +32,11 @@
             alert("Messages cannot be more than 50 characters!");
             return;
         }
-        let messages = chrome.storage.local.get("custom");
-        messages.push({content: message, status: true});
-        chrome.storage.local.set({"custom" : messages}, refreshTable()); // TODO Add helper function to update premade table
+        chrome.storage.local.get(["custom"], function(result) {
+            console.log(result);
+            result.custom.push({content: message, status: true});
+            chrome.storage.local.set({"custom" : result.custom});
+        }); // TODO Add helper function to update premade table
     }
     
     // pre: accepts message to be removed as input
