@@ -14,17 +14,10 @@
     },
     "browser_action": {
         "default_title": "iCare",
-<<<<<<< HEAD
-        "default_icon": "./img/LogoMakr-3issad.png"
-    },
-    "permissions": ["activeTab", "storage"],
-    "options": "popup.html",
-    "options_page": "settingsView.html"
-=======
         "default_icon": "./components/assets/iCare_Logo_1_small.png",
         "default_popup": "./components/pop-up/popup.html"
     },
     "permissions": ["activeTab"],
-    "options": "./components/pop-up/popup.html"
->>>>>>> yichi-dev
+    "options": "./components/pop-up/popup.html",
+    "options_page": "./components/setting/settingsView.html"
 }
