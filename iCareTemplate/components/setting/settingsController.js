@@ -5,7 +5,9 @@
 
     function initialize() {
         $("add").addEventListener("click", addMessage);
-        chrome.storage.local.set({"custom": []}); // purely for testing, remove later
+        chrome.storage.local.clear(); // FOR TESTING PURPOSES ONLY
+        // Add more event listeners
+        //chrome.storage.local.set({"custom": []}); // purely for testing, remove later
     }
 
     // pre: no inputs
@@ -32,48 +34,55 @@
             alert("Messages cannot be more than 50 characters!");
             return;
         }
-        chrome.storage.local.get(["custom"], function(result) {
-            console.log(result);
+        chrome.storage.local.get("custom", function(result) {
             result.custom.push({content: message, status: true});
             chrome.storage.local.set({"custom" : result.custom});
+            refreshTable();
         }); // TODO Add helper function to update premade table
     }
     
     // pre: accepts message to be removed as input
     // post: message is removed
     function removeMessage(id) {
-        let messages = chrome.storage.local.get("custom");
-        let message = $(id).value;
-        for (let i = 0; i < messages.length; i++) {
-            if (messages[i].content == message) {
-                messages.splice(i, 1);
-                break;
+        console.log("removing message");
+        chrome.storage.local.get("custom", function(result) {
+            let message = $(id).value;
+            console.log("message is " + message);
+            let messages = result.custom;
+            for (let i = 0; i < messages.length; i++) {
+                if (messages[i].content == message) {
+                    messages.splice(i, 1);
+                    break;
+                }
             }
-        }
-        chrome.storage.local.set({"custom" : messages}, refreshTable());
+            chrome.storage.local.set({"custom" : messages});
+            refreshTable();
+        });
     }
     
-    // Should we just remove this function? Seems like extra work on the HTML/JS side for little gain
-
     // pre: accepts a message to be edited (message1) and the new text (message2) as input
     // post: message is updated/edited
     function editMessage(id) {
-        let messages = chrome.storage.local.get("custom");
-        let message = $(id).value;
-        let newMessage = $("edit_message").value; // should grab this from an edit message box
-        for (let i = 0; i < messages.length; i++) {
-            if (messages[i].content == message) {
-                messages[i] = newMessage;
-                break;
+        chrome.storage.local.get("custom", function(result) {
+            let message = $(id).value;
+            let messages = result.custom;
+            let newMessage = $("edit_message").value; // should grab this from an edit message box
+            // add DOM manipulation for edit box
+            for (let i = 0; i < messages.length; i++) {
+                if (messages[i].content == message) {
+                    messages[i] = newMessage;
+                    break;
+                }
             }
-        }
-        chrome.storage.local.set({"custom" : messages}, refreshTable());
+            chrome.storage.local.set({"custom" : messages});
+            refreshTable();
+        });
     }
     
     // pre: a new watch threshold (1-5) to be added as input
     // post: watch threshold is updated
-    function updateWatchThreshold(videos) {
-        // TODO functionality to update threshold incl error handling
+    function updateWatchThreshold() {
+        chrome.storage.local.set({"Threshold": $("threshold").value});
     }
     
     // pre: a currently existing premade message
@@ -84,15 +93,16 @@
         // a second array with the actual message with index corresponding to id
         let message = $(id).value;
         let toggle = $(id).checked;
-        let messages = chrome.storage.local.get("premade");
-        messages = messages[category];
-        for (let i = 0; i < messages.length; i++) {
-            if (messages[i].content == message) {
-                messages[i].status = toggle;
-                break;
+        chrome.storage.local.get("premade", function(result) {
+            let messages = result.premade[category];
+            for (let i = 0; i < messages.length; i++) {
+                if (messages[i].content == message) {
+                    messages[i].status = toggle;
+                    break;
+                }
             }
-        }
-        chrome.storage.local.set({"premade" : messages});
+            chrome.storage.local.set({"premade" : messages});
+        });
     }
 
     // Category status is stored as an array of objects with keys "category" and "status"
@@ -101,29 +111,45 @@
     // post: category status is changed
     function updateCategory(category, id) {
         let toggle = $(id).checked;
-        let categories = chrome.storage.local.get("category");
-        for (let i = 0; i < categories.length; i++) {
-            if (categories[i].category == category) {
-                categories[i].status = toggle;
-                break;
+        chrome.storage.local.get("category", function(result) {
+            let categories = result.category;
+            for (let i = 0; i < categories.length; i++) {
+                if (categories[i].category == category) {
+                    categories[i].status = toggle;
+                    break;
+                }
             }
-        }
-        chrome.storage.local.set({"category" : categories});
+            chrome.storage.local.set({"category" : categories});
+        });
     }
 
     function refreshTable() {
         // TODO functionality to refresh the custom table contents
         let table = $("custom_table");
-        let messages = chrome.storage.local.get("custom");
-        let newBody = document.createElement("tbody");
-        for (var m in messages) {
-            let row = newBody.insertRow();
-            let cell1 = row.insertCell();
-            let cell2 = row.insertCell(); // edit
-            let cell3 = row.insertCell(); // remove
-            cell1.innerText = m;
-        }
-        table.replaceChild(newBody, table.querySelector("tbody"));
+        console.log("refreshing the table!");
+        chrome.storage.local.get("custom", function(result) {
+            let newBody = document.createElement("tbody");
+            let messages = result.custom;
+            console.log(messages);
+            for (let i = 0; i < messages.length; i++) {
+                let m = messages[i].content;
+                let row = newBody.insertRow();
+                row.id = "custom " + i;
+                let cell1 = row.insertCell();
+                let cell2 = row.insertCell(); // edit
+                let cell3 = row.insertCell(); // remove
+                cell1.innerText = m;
+                let remove = document.createElement("input");
+                remove.setAttribute("type", "button");
+                remove.setAttribute("value", row.id);
+                remove.addEventListener("click", function(){
+                    removeMessage(row.id);
+                });
+                cell3.appendChild = remove;
+                console.log("adding " + m);
+            }
+            table.replaceChild(newBody, table.querySelector("tbody"));
+        });
     }
 
     /**
@@ -139,43 +165,48 @@
 // pre: no input 
 // post: return a Random message 
 function getRandomMessage() {
-    //TODO: Randomly select a message from all selected pools.
-    let premade = chrome.storage.local.get("premade");
-    let custom = chrome.storage.local.get("custom");
-    let categories = chrome.storage.local.get("category");
-    let allMessages = [];
-    for (let i = 0; i < categories.length; i++) {
-        if (categories[i].status == true) {
-            let tempMessages = premade[categories[i].category];
-            for (let j = 0; j < tempMessages.length; j++) {
-                if (tempMessages[j].status == true) {
-                    allMessages.push(tempMessages[j].content);
+    chrome.storage.local.get(["premade", "custom", "category"], function(result) {
+        let premade = result.premade;
+        let custom = result.custom;
+        let categories = result.category;
+        let allMessages = [];
+        for (let i = 0; i < categories.length; i++) {
+            if (categories[i].status == true) {
+                let tempMessages = premade[categories[i].category];
+                for (let j = 0; j < tempMessages.length; j++) {
+                    if (tempMessages[j].status == true) {
+                        allMessages.push(tempMessages[j].content);
+                    }
                 }
             }
         }
-    }
-    for (let i = 0; i < custom.length; i++) {
-        if (custom[i].status == true) {
-            allMessages.push(custom[i].content);
+        for (let i = 0; i < custom.length; i++) {
+            if (custom[i].status == true) {
+                allMessages.push(custom[i].content);
+            }
         }
-    }
-    return allMessages[Math.floor(Math.random() * allMessages.length)];
+        return allMessages[Math.floor(Math.random() * allMessages.length)];
+    });
 }
   
 // pre: no input 
 // post: return all of the current setting as an object
 function getCurrentSettingsAndData() {
-    return {
-        threshold: chrome.storage.local.get("threshold"),
-        premadeMessages: chrome.storage.local.get("premade"),
-        customMessages: chrome.storage.local.get("custom"),
-        categories: chrome.storage.local.get("category")
-    };
+    chrome.storage.local.get(["threshold", "premade", "custom", "category"], function(result) {
+        return {
+            watchThreshold: result.threshold,
+            premadeMessages: result.premade,
+            customMessages: result.custom,
+            categoryStatus: result.category
+        }
+    });
 }
   
 // pre: no input 
 // post: returns the current watch threshold
 function getThreshold() {
-    return chrome.storage.local.get("threshold");
+    chrome.storage.local.get("threshold", function(result) {
+        return result.threshold;
+    });
 }
   
