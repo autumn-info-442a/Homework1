@@ -1,3 +1,5 @@
+import {getRandomMessage} from '../setting/settingsController';
+
 console.log("Youtube Kid activated")
 
 // a temporary placeholder for tthreshol. 
@@ -35,7 +37,7 @@ function checkURL() {
             // temporay implemetation for the timer. 
             setTimeout(() => {
                 showVideo();
-            }, 5000)
+            }, 10000)
         }
     }
 } 
@@ -76,6 +78,8 @@ function injectOverlay() {
         overlay.style.height = size.height + 'px';
         overlay.setAttribute('class', 'style-scope ytk-two-column-watch-next-results-renderer');
         overlay.setAttribute('id', 'iCare Overlay');
+        console.log(generateOverlay());
+        overlay.append(generateOverlay());
         videoContainerParent.append(overlay);
         console.log('overlay injected');
     }
@@ -127,3 +131,72 @@ function showVideo() {
 //       // TODO: Append the iCareOverlay with a customer message to the brower. 
 //       document.getElementById("youtubePlayer").append("iCareOverlay");
 //   }
+
+function generateOverlay() {
+    let overlayOuterContainer = document.createElement('section');
+    let overlayInnerContainer = document.createElement('div');
+    overlayInnerContainer.setAttribute('class', 'icare-overlay');
+
+    // top-icons
+
+    let iconsContainer = document.createElement('div');
+    iconsContainer.setAttribute('class', 'top-icons');
+
+    let logoContainer = document.createElement('div');
+    logoContainer.setAttribute('class', 'icare-logo-container');
+    let logoImg = document.createElement('img');
+    logoImg.setAttribute('id', 'icare-logo');
+    logoImg.setAttribute('src', '/iCare_Logo_1_small.png');
+    logoImg.setAttribute('alt', 'icare-logo');
+    logoContainer.append(logoImg);
+
+    let timerContainer = document.createElement('div');
+    timerContainer.setAttribute('class', 'timer-container');
+    let iconSpan = document.createElement('span');
+    iconSpan.setAttribute('class', 'timer-icon');
+    let timerImg = document.createElement('img');
+    timerImg.setAttribute('id', 'timer-img');
+    timerImg.setAttribute('src', '../assets/icons8-timer-48.png');
+    timerImg.setAttribute('alt', 'timer-icon');
+    iconSpan.append(timerImg);
+    let timerCountSpan = document.createElement('span');
+    timerCountSpan.setAttribute('class', 'timer-count');
+    timerCountSpan.innerHTML = 8;
+    timerContainer.append(iconSpan);
+    timerContainer.append(timerCountSpan);
+
+    
+    iconsContainer.append(logoContainer);
+    iconsContainer.append(timerContainer);
+    
+
+
+    // header
+    let header = document.createElement('header');
+    let headerText = document.createElement('h1');
+    headerText.innerHTML = 'Before your next video:';
+    header.append(headerText);
+
+    // message container 
+    let messageContainer = document.createElement('div');
+    messageContainer.setAttribute('class', 'message-container');
+    let message = document.createElement('p');
+    message.setAttribute('class', 'message');
+    message.innerHTML = getRandomMessage();
+    messageContainer.append(message);
+
+    // close button
+
+    let button = document.createElement('button');
+    button.setAttribute('class', 'close-button');
+    button.setAttribute('type', 'button');
+    button.innerHTML = 'Close';
+
+
+    overlayInnerContainer.append(iconsContainer);
+    overlayInnerContainer.append(header);
+    overlayInnerContainer.append(messageContainer);
+    overlayInnerContainer.append(button);
+    overlayOuterContainer.append(overlayInnerContainer);
+    return overlayOuterContainer;
+}

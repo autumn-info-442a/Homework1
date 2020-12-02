@@ -1,4 +1,4 @@
-body {
+section {
     background-color: #F48D97;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 100;
@@ -16,9 +16,6 @@ h1 {
 }
 
 .icare-logo-container {
-    position: absolute;
-    left: -400px;
-    top: 10px;
 }
 
 .icare-logo-container img {
@@ -58,7 +55,6 @@ h1 {
 .close-button {
     display: flex;
     margin-top: 8rem;
-    margin-left: 13rem;
 }
 
 header {
