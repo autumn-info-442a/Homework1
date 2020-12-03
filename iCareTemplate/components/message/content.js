@@ -1,11 +1,9 @@
-import {getRandomMessage} from '../setting/settingsController';
-
 console.log("Youtube Kid activated")
 
 // a temporary placeholder for tthreshol. 
 // Will import the data from SettingsModel in the future
 
-const WATCH_THRESHOLD = 2; 
+const WATCH_THRESHOLD = 3; 
 
 let videoCount = 0; 
 
@@ -182,7 +180,7 @@ function generateOverlay() {
     messageContainer.setAttribute('class', 'message-container');
     let message = document.createElement('p');
     message.setAttribute('class', 'message');
-    message.innerHTML = getRandomMessage();
+    message.innerHTML = 'test';
     messageContainer.append(message);
 
     // close button
