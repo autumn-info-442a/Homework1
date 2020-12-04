@@ -6,7 +6,8 @@
     "content_scripts": [
         {
             "matches": ["*://www.youtubekids.com/*"],
-            "js": ["./components/message/content.js"]
+            "js": ["./components/message/content.js"],
+            "css": ["./components/message/messageView.css"]
         }
     ], 
     "background": {
@@ -18,5 +19,8 @@
         "default_popup": "./components/pop-up/popup.html"
     },
     "permissions": ["activeTab", "storage"],
-    "options_page": "./components/setting/settingsView.html"
+    "options_page": "./components/setting/settingsView.html",
+    "web_accessible_resources": [
+        "components/assets/iCare_Logo_1_small.png"
+        ]
 }

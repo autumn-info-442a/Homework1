@@ -187,7 +187,7 @@
 
 // pre: no input 
 // post: return a Random message 
-function getRandomMessage() {
+export function getRandomMessage() {
     chrome.storage.local.get(["premade", "custom", "category"], function(result) {
         let premade = result.premade;
         let custom = result.custom;
