@@ -7,14 +7,13 @@
         $("add").addEventListener("click", addMessage);
         chrome.storage.local.clear(); // FOR TESTING PURPOSES ONLY
         // Add more event listeners
-        //chrome.storage.local.set({"custom": []}); // purely for testing, remove later
+        chrome.storage.local.set({"custom": []}); // purely for testing, remove later
     }
 
     // pre: no inputs
     // post: all settings are displayed
     function displaySettings() {
-        // TODO functionality to parse and display settings
-        // This function interacts with SettingsView to display the page with appropriate data
+        refreshTable();
     }
 
     /**
@@ -35,8 +34,13 @@
             return;
         }
         chrome.storage.local.get("custom", function(result) {
+            if (result.custom.length >= 15) {
+                alert("Cannot add more than 15 messages!");
+                return;
+            }
             result.custom.push({content: message, status: true});
             chrome.storage.local.set({"custom" : result.custom});
+            $("new_message").value = "";
             refreshTable();
         }); // TODO Add helper function to update premade table
     }
@@ -56,6 +60,10 @@
                 }
             }
             chrome.storage.local.set({"custom" : messages});
+            $("edit_message").innerText = "";
+            $("edit_message").classList.add("edit_hidden");
+            $("edit").classList.add("edit_hidden");
+            $("edit").outerHTML = $("edit").outerHTML; // should remove all event listeners
             refreshTable();
         });
     }
@@ -66,15 +74,18 @@
         chrome.storage.local.get("custom", function(result) {
             let message = $(id).value;
             let messages = result.custom;
-            let newMessage = $("edit_message").value; // should grab this from an edit message box
-            // add DOM manipulation for edit box
+            let newMessage = $("edit_message").value;
             for (let i = 0; i < messages.length; i++) {
                 if (messages[i].content == message) {
-                    messages[i] = newMessage;
+                    messages[i].content = newMessage;
                     break;
                 }
             }
             chrome.storage.local.set({"custom" : messages});
+            $("edit_message").value = "";
+            $("edit_message").classList.add("edit_hidden");
+            $("edit").classList.add("edit_hidden");
+            $("edit").outerHTML = $("edit").outerHTML; // should remove all event listeners
             refreshTable();
         });
     }
@@ -135,17 +146,29 @@
                 let m = messages[i].content;
                 let row = newBody.insertRow();
                 row.id = "custom " + i;
+                row.value = m;
                 let cell1 = row.insertCell();
                 let cell2 = row.insertCell(); // edit
                 let cell3 = row.insertCell(); // remove
                 cell1.innerText = m;
+                let edit = document.createElement("input");
+                edit.setAttribute("type", "button");
+                edit.setAttribute("value", "Edit");
+                edit.addEventListener("click", function() {
+                    $("edit_message").classList.remove("edit_hidden");
+                    $("edit").classList.remove("edit_hidden");
+                    $("edit").addEventListener("click", function() {
+                        editMessage(row.id);
+                    });
+                });
+                cell2.appendChild(edit);
                 let remove = document.createElement("input");
                 remove.setAttribute("type", "button");
-                remove.setAttribute("value", row.id);
-                remove.addEventListener("click", function(){
+                remove.setAttribute("value", "Remove");
+                remove.addEventListener("click", function() {
                     removeMessage(row.id);
                 });
-                cell3.appendChild = remove;
+                cell3.appendChild(remove);
                 console.log("adding " + m);
             }
             table.replaceChild(newBody, table.querySelector("tbody"));

@@ -23,7 +23,7 @@ img {
     margin: 2rem 7rem 4rem 7rem;
 }
 
-#add {
+#add, #edit {
     padding: 0;
     font-size: 12px;
     padding: 9px 12px;
@@ -37,4 +37,8 @@ button {
     font-weight: bold;
     padding: 20px;
     border: none;
+}
+
+.edit_hidden {
+    display: none;
 }

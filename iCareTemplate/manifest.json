@@ -18,6 +18,5 @@
         "default_popup": "./components/pop-up/popup.html"
     },
     "permissions": ["activeTab", "storage"],
-    "options": "./components/pop-up/popup.html",
     "options_page": "./components/setting/settingsView.html"
 }
