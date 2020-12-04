@@ -3,7 +3,7 @@ console.log("Youtube Kid activated")
 // a temporary placeholder for tthreshol. 
 // Will import the data from SettingsModel in the future
 
-const WATCH_THRESHOLD = 3; 
+const WATCH_THRESHOLD = 2; 
 
 let videoCount = 0; 
 
@@ -32,10 +32,8 @@ function checkURL() {
             pauseVideo();
             injectOverlay()
             resetVideoCount();
-            // temporay implemetation for the timer. 
-            setTimeout(() => {
-                showVideo();
-            }, 10000)
+
+            setTimer();
         }
     }
 } 
@@ -60,7 +58,7 @@ function hideVideoContainer() {
             clearInterval(intervalId);
             return videoContainer
         }
-    }, 500);
+    }, 100);
 }
 
 function injectOverlay() {
@@ -72,15 +70,15 @@ function injectOverlay() {
         let size = videoContainerParent.getBoundingClientRect();
 
         overlay.style.backgroundColor = '#F48D97';
-        overlay.style.width = size.width + 'px';
-        overlay.style.height = size.height + 'px';
+        overlay.style.width = '100%';
+        overlay.style.height = '100%';
         overlay.setAttribute('class', 'style-scope ytk-two-column-watch-next-results-renderer');
         overlay.setAttribute('id', 'iCare Overlay');
-        console.log(generateOverlay());
         overlay.append(generateOverlay());
         videoContainerParent.append(overlay);
         console.log('overlay injected');
     }
+
 }
 
 function pauseVideo() {
@@ -144,7 +142,7 @@ function generateOverlay() {
     logoContainer.setAttribute('class', 'icare-logo-container');
     let logoImg = document.createElement('img');
     logoImg.setAttribute('id', 'icare-logo');
-    logoImg.setAttribute('src', '/iCare_Logo_1_small.png');
+    logoImg.setAttribute('src', chrome.runtime.getURL('components/assets/iCare_Logo_1_small.png'));
     logoImg.setAttribute('alt', 'icare-logo');
     logoContainer.append(logoImg);
 
@@ -159,15 +157,16 @@ function generateOverlay() {
     iconSpan.append(timerImg);
     let timerCountSpan = document.createElement('span');
     timerCountSpan.setAttribute('class', 'timer-count');
-    timerCountSpan.innerHTML = 8;
+
+    let timerCount = document.createElement('p');
+    timerCount.setAttribute('class', 'timer-count-p')
+    timerCountSpan.append(timerCount);
+
     timerContainer.append(iconSpan);
     timerContainer.append(timerCountSpan);
 
-    
     iconsContainer.append(logoContainer);
     iconsContainer.append(timerContainer);
-    
-
 
     // header
     let header = document.createElement('header');
@@ -189,7 +188,9 @@ function generateOverlay() {
     button.setAttribute('class', 'close-button');
     button.setAttribute('type', 'button');
     button.innerHTML = 'Close';
-
+    button.addEventListener('click', (e) => {
+        showVideo();
+    })
 
     overlayInnerContainer.append(iconsContainer);
     overlayInnerContainer.append(header);
@@ -197,4 +198,11 @@ function generateOverlay() {
     overlayInnerContainer.append(button);
     overlayOuterContainer.append(overlayInnerContainer);
     return overlayOuterContainer;
+}
+
+function setTimer() {
+    let timer = document.getElementsByClassName('timer-count-p');
+    console.log(timer);
+    timer.innerHTML = 15;
+    console.log(timer);
 }

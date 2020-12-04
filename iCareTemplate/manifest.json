@@ -20,5 +20,8 @@
     },
     "permissions": ["activeTab", "storage"],
     "options": "./components/pop-up/popup.html",
-    "options_page": "./components/setting/settingsView.html"
+    "options_page": "./components/setting/settingsView.html",
+    "web_accessible_resources": [
+        "components/assets/iCare_Logo_1_small.png"
+        ]
 }
