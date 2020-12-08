@@ -1,18 +1,26 @@
 console.log("background.js activated")
-console.log(window.location.href)
+
+let isUpdatingCountAfterRefresh = false; 
+
+chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+    if (request.getRandomMessage) {
+      sendResponse({message: getRandomMessage()});
+    } else if (request.checkIsUpdatingCountAfterRefresh) {
+      sendResponse({result: isUpdatingCountAfterRefresh});
+      console.log("update message sent: ", isUpdatingCountAfterRefresh)
+    } else {
+      if (request.isUpdatingCountAfterRefreshData) {
+        isUpdatingCountAfterRefresh = true;
+        console.log("value changed: ", isUpdatingCountAfterRefresh);
+      } else {
+        isUpdatingCountAfterRefresh = false;
+        console.log("value changed: ", isUpdatingCountAfterRefresh);
+      }
+    }
+});
 
 
-window.addEventListener('load', () => {
-  let videoLinks = document.getElementsByClassName("yt-simple-endpoint")
-  console.log(videoLinks)
-})
 
-
-  // post: threshold is updated
-function newThreshold() {
-    watchThreshold = 0; 
+function getRandomMessage() {
+  return "I am a random message!";
 }
-  
-// matched url pattern: https://www.youtubekids.com/watch?v=sLuSq2RL9X0
-
-// matching url expression: '*://*.youtubekids.com/watch/*', or 'https://*.youtubekids.com/watch*'
