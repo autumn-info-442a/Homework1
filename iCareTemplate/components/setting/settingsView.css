@@ -42,3 +42,7 @@ button {
 .edit_hidden {
     display: none;
 }
+
+.category_header {
+    font-weight: bold;
+}
