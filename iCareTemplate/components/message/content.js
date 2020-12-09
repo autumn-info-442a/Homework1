@@ -222,30 +222,3 @@ function generateOverlay(height) {
     overlayContainer.append(buttonContainer);
     return overlayContainer;
 }
-
-// function getRandomMessage() {
-//     chrome.storage.local.set({"premade": []});
-//     chrome.storage.local.set({"category": []});
-//     chrome.storage.local.get(["premade", "custom", "category"], function(result) {
-//         let premade = result.premade;
-//         let custom = result.custom;
-//         let categories = result.category;
-//         let allMessages = [];
-//         for (let i = 0; i < categories.length; i++) {
-//             if (categories[i].status == true) {
-//                 let tempMessages = premade[categories[i].category];
-//                 for (let j = 0; j < tempMessages.length; j++) {
-//                     if (tempMessages[j].status == true) {
-//                         allMessages.push(tempMessages[j].content);
-//                     }
-//                 }
-//             }
-//         }
-//         for (let i = 0; i < custom.length; i++) {
-//             if (custom[i].status == true) {
-//                 allMessages.push(custom[i].content);
-//             }
-//         }
-//         return allMessages[Math.floor(Math.random() * allMessages.length)];
-//     });
-// }

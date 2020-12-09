@@ -4,7 +4,12 @@ let isUpdatingCountAfterRefresh = false;
 
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     if (request.getRandomMessage) {
-      sendResponse({message: getRandomMessage()});
+      sendResponse({message: getRandomMessage().then(function(result) {
+        return result;
+      })});
+      console.log(getRandomMessage().then(function(result) {
+        return result;
+      }));
     } else if (request.checkIsUpdatingCountAfterRefresh) {
       sendResponse({result: isUpdatingCountAfterRefresh});
       console.log("update message sent: ", isUpdatingCountAfterRefresh)
@@ -18,7 +23,6 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
       }
     }
 });
-
 
 chrome.runtime.onInstalled.addListener(function(details) {
   if (details.reason == "install") {
@@ -87,28 +91,32 @@ function setInitialSettings() {
 // pre: no input 
 // post: return a Random message 
 function getRandomMessage() {
-  chrome.storage.local.get(["premade", "custom", "category"], function(result) {
-      let premade = result.premade;
-      let custom = result.custom;
-      let categories = result.category;
-      let allMessages = [];
-      for (let i = 0; i < categories.length - 1; i++) {
-          if (categories[i].status == true) {
-              let tempMessages = premade[categories[i].category];
-              for (let j = 0; j < tempMessages.length; j++) {
-                  if (tempMessages[j].status == true) {
-                      allMessages.push(tempMessages[j].content);
-                  }
-              }
-          }
-      }
-      if (categories[categories.length - 1].status == true) { // custom is the last in the array
-          for (let i = 0; i < custom.length; i++) {
-              if (custom[i].status == true) {
-                  allMessages.push(custom[i].content);
-              }
-          }
-      }
-      return allMessages[Math.floor(Math.random() * allMessages.length)];
-  });
+    return new Promise(resolve => {
+        console.log("grabbing a random message");
+        chrome.storage.local.get(["premade", "custom", "category"], function(result) {
+            let premade = result.premade;
+            let custom = result.custom;
+            let categories = result.category;
+            let allMessages = [];
+            for (let i = 0; i < categories.length - 1; i++) {
+                if (categories[i].status == true) {
+                    let tempMessages = premade[categories[i].category];
+                    for (let j = 0; j < tempMessages.length; j++) {
+                        if (tempMessages[j].status == true) {
+                            allMessages.push(tempMessages[j].content);
+                        }
+                    }
+                }
+            }
+            if (categories[categories.length - 1].status == true) { // custom is the last in the array
+                for (let i = 0; i < custom.length; i++) {
+                    if (custom[i].status == true) {
+                        allMessages.push(custom[i].content);
+                    }
+                }
+            }
+            console.log(allMessages[Math.floor(Math.random() * allMessages.length)]);
+            resolve(allMessages[Math.floor(Math.random() * allMessages.length)]);
+        });
+    });
 }
