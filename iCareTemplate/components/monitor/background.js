@@ -17,7 +17,6 @@ getThreshold().then(function(result) {
 
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     if (request.getRandomMessage) {
-
       getRandomMessage().then(function(result) {
         messageResult = result;
       });
