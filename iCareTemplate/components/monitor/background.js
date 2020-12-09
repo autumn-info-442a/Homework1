@@ -1,15 +1,15 @@
 console.log("background.js activated")
 
 let isUpdatingCountAfterRefresh = false; 
+let messageResult; 
 
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     if (request.getRandomMessage) {
-      sendResponse({message: getRandomMessage().then(function(result) {
-        return result;
-      })});
-      console.log(getRandomMessage().then(function(result) {
-        return result;
-      }));
+
+      getRandomMessage().then(function(result) {
+        messageResult = result;
+      })
+      sendResponse({message: messageResult});
     } else if (request.checkIsUpdatingCountAfterRefresh) {
       sendResponse({result: isUpdatingCountAfterRefresh});
       console.log("update message sent: ", isUpdatingCountAfterRefresh)
