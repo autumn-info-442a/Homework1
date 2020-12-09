@@ -91,13 +91,17 @@
             let message = $(id).value;
             let messages = result.custom;
             let newMessage = $("edit_message").value;
-            for (let i = 0; i < messages.length; i++) {
-                if (messages[i].content == message) {
-                    messages[i].content = newMessage;
-                    break;
+            if (newMessage.length == 0 || newMessage.length > 15) {
+                alert("Message is an inappropriate length!");
+            } else {
+                for (let i = 0; i < messages.length; i++) {
+                    if (messages[i].content == message) {
+                        messages[i].content = newMessage;
+                        break;
+                    }
                 }
+                chrome.storage.local.set({"custom" : messages});
             }
-            chrome.storage.local.set({"custom" : messages});
             $("edit_message").value = "";
             $("edit_message").classList.add("edit_hidden");
             $("edit").classList.add("edit_hidden");
