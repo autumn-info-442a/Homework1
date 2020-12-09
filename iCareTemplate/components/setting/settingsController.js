@@ -64,10 +64,8 @@
     // pre: accepts message to be removed as input
     // post: message is removed
     function removeMessage(id) {
-        console.log("removing message");
         chrome.storage.local.get("custom", function(result) { // shouldn't ever be called without a message existing
             let message = $(id).value;
-            console.log("message is " + message);
             let messages = result.custom;
             for (let i = 0; i < messages.length; i++) {
                 if (messages[i].content == message) {
@@ -127,8 +125,9 @@
             for (let i = 0; i < messages.length; i++) {
                 if (messages[i].content == message) {
                     messages[i].status = toggle;
-                    checkIfMessageRemains().then(function(result) {
-                        if (!result && !toggle) {
+                    checkIfMessageRemains().then(function(data) {
+                        console.log(data);
+                        if (!data && !toggle) {
                             alert("Cannot have less than 1 message enabled");
                             box_id.checked = true;
                             messages[i].status = !toggle;

@@ -2,6 +2,18 @@ console.log("background.js activated")
 
 let isUpdatingCountAfterRefresh = false; 
 let messageResult;
+let threshold;
+
+// technically fence posting?
+getRandomMessage().then(function(result) {
+  messageResult = result;
+  console.log("initializing random message");
+});
+
+getThreshold().then(function(result) {
+  threshold = result;
+  console.log("initializing threshold");
+});
 
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     if (request.getRandomMessage) {
@@ -9,16 +21,15 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
       getRandomMessage().then(function(result) {
         messageResult = result;
       });
-      
       sendResponse({message: messageResult});
-      console.log(getRandomMessage().then((result) => {
-        return result;
-      }));
     } else if (request.checkIsUpdatingCountAfterRefresh) {
       sendResponse({result: isUpdatingCountAfterRefresh});
       console.log("update message sent: ", isUpdatingCountAfterRefresh)
     } else if (request.getThreshold) {
-      sendResponse({threshold: getThreshold()});
+      getThreshold().then(function(result) {
+        threshold = result;
+      });
+      sendResponse({threshold: threshold});
     } else {
       if (request.isUpdatingCountAfterRefreshData) {
         isUpdatingCountAfterRefresh = true;
@@ -39,13 +50,15 @@ chrome.runtime.onInstalled.addListener(function(details) {
 window.addEventListener('load', () => {
   let videoLinks = document.getElementsByClassName("yt-simple-endpoint")
   console.log(videoLinks)
-})
+});
 
 // pre: no input 
 // post: returns the current watch threshold
 function getThreshold() {
-  chrome.storage.local.get("threshold", function(result) {
-      return result.threshold;
+  return new Promise(resolve => {
+    chrome.storage.local.get("threshold", function(result) {
+      resolve(result.threshold);
+    });
   });
 }
 
