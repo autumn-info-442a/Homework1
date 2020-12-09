@@ -5,9 +5,6 @@
     window.addEventListener("load", initialize);
 
     function initialize() {
-        chrome.storage.local.get(function(result) {
-            console.log(result);
-        });
         displaySettings();
         $("add").addEventListener("click", addMessage);
         $("threshold").addEventListener("change", updateWatchThreshold);
@@ -120,13 +117,11 @@
         let message = $(message_id).value;
         let toggle = box_id.checked;
         chrome.storage.local.get("premade", function(result) {
-            console.log(result);
             let messages = result.premade[category];
             for (let i = 0; i < messages.length; i++) {
                 if (messages[i].content == message) {
                     messages[i].status = toggle;
-                    checkIfMessageRemains().then(function(data) {
-                        console.log(data);
+                    checkIfMessageRemains(category).then(function(data) {
                         if (!data && !toggle) {
                             alert("Cannot have less than 1 message enabled");
                             box_id.checked = true;
@@ -140,7 +135,6 @@
                     });
                 }
             }
-            console.log(result);
         });
     }
 
@@ -273,7 +267,7 @@
         });
     }
 
-    function checkIfMessageRemains() {
+    function checkIfMessageRemains(category) {
         return new Promise(resolve => {
             chrome.storage.local.get(["premade", "custom", "category"], function(result) {
                 let premade = result.premade;
@@ -288,6 +282,8 @@
                                 allMessages.push(tempMessages[j].content);
                             }
                         }
+                    } else if (categories[i].category == category) {
+                        resolve(true);
                     }
                 }
                 if (categories[categories.length - 1].status == true) { // custom is the last in the array
