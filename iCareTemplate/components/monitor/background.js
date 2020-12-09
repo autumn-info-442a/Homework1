@@ -19,8 +19,6 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     }
 });
 
-
-
 function getRandomMessage() {
   return "I am a random message!";
 }
