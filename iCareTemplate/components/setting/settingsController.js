@@ -5,9 +5,6 @@
     window.addEventListener("load", initialize);
 
     function initialize() {
-        chrome.storage.local.get(function(result) {
-            console.log(result);
-        });
         displaySettings();
         $("add").addEventListener("click", addMessage);
         $("threshold").addEventListener("change", updateWatchThreshold);
@@ -64,10 +61,8 @@
     // pre: accepts message to be removed as input
     // post: message is removed
     function removeMessage(id) {
-        console.log("removing message");
         chrome.storage.local.get("custom", function(result) { // shouldn't ever be called without a message existing
             let message = $(id).value;
-            console.log("message is " + message);
             let messages = result.custom;
             for (let i = 0; i < messages.length; i++) {
                 if (messages[i].content == message) {
@@ -91,13 +86,17 @@
             let message = $(id).value;
             let messages = result.custom;
             let newMessage = $("edit_message").value;
-            for (let i = 0; i < messages.length; i++) {
-                if (messages[i].content == message) {
-                    messages[i].content = newMessage;
-                    break;
+            if (newMessage.length == 0 || newMessage.length > 15) {
+                alert("Message is an inappropriate length!");
+            } else {
+                for (let i = 0; i < messages.length; i++) {
+                    if (messages[i].content == message) {
+                        messages[i].content = newMessage;
+                        break;
+                    }
                 }
+                chrome.storage.local.set({"custom" : messages});
             }
-            chrome.storage.local.set({"custom" : messages});
             $("edit_message").value = "";
             $("edit_message").classList.add("edit_hidden");
             $("edit").classList.add("edit_hidden");
@@ -118,13 +117,12 @@
         let message = $(message_id).value;
         let toggle = box_id.checked;
         chrome.storage.local.get("premade", function(result) {
-            console.log(result);
             let messages = result.premade[category];
             for (let i = 0; i < messages.length; i++) {
                 if (messages[i].content == message) {
                     messages[i].status = toggle;
-                    checkIfMessageRemains().then(function(result) {
-                        if (!result && !toggle) {
+                    checkIfMessageRemains(category).then(function(data) {
+                        if (!data && !toggle) {
                             alert("Cannot have less than 1 message enabled");
                             box_id.checked = true;
                             messages[i].status = !toggle;
@@ -137,7 +135,6 @@
                     });
                 }
             }
-            console.log(result);
         });
     }
 
@@ -270,7 +267,7 @@
         });
     }
 
-    function checkIfMessageRemains() {
+    function checkIfMessageRemains(category) {
         return new Promise(resolve => {
             chrome.storage.local.get(["premade", "custom", "category"], function(result) {
                 let premade = result.premade;
@@ -285,6 +282,8 @@
                                 allMessages.push(tempMessages[j].content);
                             }
                         }
+                    } else if (categories[i].category == category) {
+                        resolve(true);
                     }
                 }
                 if (categories[categories.length - 1].status == true) { // custom is the last in the array

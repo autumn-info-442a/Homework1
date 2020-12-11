@@ -1,9 +1,9 @@
 console.log("Youtube Kid activated");
 
-let watch_threshold;; 
 const TIMER = 5;
 
 let currentMessage = '';
+let watchThreshold = 5; 
 let videoCount = 0; 
 let currentURL = '';
 let previousURL = '';
@@ -33,7 +33,7 @@ function checkURL() {
             console.log('here is current video count: ', videoCount);
         }
         previousURL = currentURL;
-        if (videoCount === watch_threshold) {
+        if (videoCount === watchThreshold) {
             injectOverlay();
             hideVideoContainer();
             pauseVideo();
@@ -104,8 +104,8 @@ function setMessage() {
 function getThreshold() {
     console.log("getting threshold....");
     chrome.runtime.sendMessage({getThreshold: true}, (response) => {
-        console.log(response.threshold);
-        watch_threshold = response.threshold;
+        watchThreshold = response.threshold;
+        console.log(watchThreshold);
     });
 }
 
