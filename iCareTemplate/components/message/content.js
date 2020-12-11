@@ -1,7 +1,7 @@
 console.log("Youtube Kid activated");
 
-const WATCH_THRESHOLD = 5; 
-const TIMER = 3;
+let watch_threshold;; 
+const TIMER = 5;
 
 let currentMessage = '';
 let videoCount = 0; 
@@ -15,6 +15,7 @@ let isUpdateCountAfterRefresh;
 window.addEventListener('load', () => {
     setInterval(() => {checkURL()}, 500)
     setMessage();
+    getThreshold();
 
     chrome.runtime.sendMessage({checkIsUpdatingCountAfterRefresh: true}, (response) => {
         isUpdateCountAfterRefresh = response.result;
@@ -32,12 +33,12 @@ function checkURL() {
             console.log('here is current video count: ', videoCount);
         }
         previousURL = currentURL;
-        if (videoCount == WATCH_THRESHOLD) {
+        if (videoCount === watch_threshold) {
             injectOverlay();
             hideVideoContainer();
             pauseVideo();
             resetVideoCount();
-            setTimer();
+            setTimer(); 
         }
     }
 } 
@@ -97,6 +98,14 @@ function injectOverlay() {
 function setMessage() {
     chrome.runtime.sendMessage({getRandomMessage: true}, (response) => {
         currentMessage = response.message;
+    });
+}
+
+function getThreshold() {
+    console.log("getting threshold....");
+    chrome.runtime.sendMessage({getThreshold: true}, (response) => {
+        console.log(response.threshold);
+        watch_threshold = response.threshold;
     });
 }
 

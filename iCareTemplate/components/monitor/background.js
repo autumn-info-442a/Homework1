@@ -1,18 +1,28 @@
 console.log("background.js activated")
 
 let isUpdatingCountAfterRefresh = false; 
-let messageResult; 
+let messageResult;
+let thresholdResult;
 
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     if (request.getRandomMessage) {
 
       getRandomMessage().then(function(result) {
         messageResult = result;
-      })
+      });
+      
       sendResponse({message: messageResult});
+      console.log(getRandomMessage().then((result) => {
+        return result;
+      }));
     } else if (request.checkIsUpdatingCountAfterRefresh) {
       sendResponse({result: isUpdatingCountAfterRefresh});
       console.log("update message sent: ", isUpdatingCountAfterRefresh)
+    } else if (request.getThreshold) {
+      getThreshold().then(result => {
+        thresholdResult = result;
+      })
+      sendResponse({threshold: thresholdResult});
     } else {
       if (request.isUpdatingCountAfterRefreshData) {
         isUpdatingCountAfterRefresh = true;
@@ -38,8 +48,11 @@ window.addEventListener('load', () => {
 // pre: no input 
 // post: returns the current watch threshold
 function getThreshold() {
-  chrome.storage.local.get("threshold", function(result) {
-      return result.threshold;
+  return new Promise (resolve => {
+    chrome.storage.local.get("threshold", function(result) {
+      console.log(result.threshold);
+      resolve(result.threshold);
+    });
   });
 }
 
