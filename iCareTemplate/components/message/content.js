@@ -33,12 +33,12 @@ function checkURL() {
             console.log('here is current video count: ', videoCount);
         }
         previousURL = currentURL;
-        if (videoCount == watchThreshold) {
+        if (videoCount === watchThreshold) {
             injectOverlay();
             hideVideoContainer();
             pauseVideo();
             resetVideoCount();
-            setTimer();
+            setTimer(); 
         }
     }
 } 
@@ -102,6 +102,7 @@ function setMessage() {
 }
 
 function getThreshold() {
+    console.log("getting threshold....");
     chrome.runtime.sendMessage({getThreshold: true}, (response) => {
         watchThreshold = response.threshold;
         console.log(watchThreshold);
