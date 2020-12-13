@@ -30,7 +30,7 @@
        _Justification_: We opt to automatically save user settings to reduce potential issues with a user forgetting to click save. The user will see text at the top of the             Settings page explaining that all settings will automatically be displayed. This also adds protections on the back end to ensure we are always saving the most                   current user settings (proactively avoiding non-save errors).
 - [S10] User settings must be saved onto the Chrome extension’s local storage
 - [S11] ~~Alert must be displayed if/when settings fail to save~~
-- [S11] **REMOVED**
+- [S11] **REMOVED**\
        _Justification_: Based on the revision of S9, we no longer place the burden of saving on the user (save button is removed). Therefore we do not feel it is necessary to 
         include this requirement as our revised S9 elminates the possibility of the user not saving.
 
