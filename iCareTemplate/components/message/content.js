@@ -33,7 +33,7 @@ function checkURL() {
             console.log('here is current video count: ', videoCount);
         }
         previousURL = currentURL;
-        if (videoCount === watchThreshold) {
+        if (videoCount == watchThreshold) {
             injectOverlay();
             hideVideoContainer();
             pauseVideo();
