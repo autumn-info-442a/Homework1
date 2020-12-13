@@ -133,7 +133,6 @@ function getRandomMessage() {
                     }
                 }
             }
-            console.log(allMessages[Math.floor(Math.random() * allMessages.length)]);
             resolve(allMessages[Math.floor(Math.random() * allMessages.length)]);
         });
     });

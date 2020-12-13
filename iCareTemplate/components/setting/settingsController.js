@@ -146,14 +146,13 @@
         let toggle = $(id).checked;
         chrome.storage.local.get("category", function(result) {
             let categories = result.category;
-            console.log(categories);
             let enabled = 0;
             for (let i = 0; i < categories.length; i++) {
                 if (categories[i].status && categories[i].category != "custom") {
                     enabled++;
                 }
             }
-            if (enabled <= 1 && !toggle) {
+            if (enabled <= 1 && !toggle && $(id).value != "custom") {
                 $(id).checked = true;
                 alert("Cannot have less than one category other than custom enabled!");
                 return;
