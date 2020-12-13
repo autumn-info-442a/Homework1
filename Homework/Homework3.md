@@ -25,7 +25,7 @@
 - [S6] All messages within each enabled category must be enabled by default
 - [S7] Users must be able to enable/disable individual messages within a pool/category
 - [S8] There must be a minimum of one message enabled across all pools (including custom messages)
-- [S9] ~~User settings must be saved when the “Save” button is pressed~~
+- [S9] ~~User settings must be saved when the “Save” button is pressed~~  
 - [S9] **REVISED**: User settings must be automatically saved any time user interacts with settings page (clicks on any button
        _Justification_: We opt to automatically save user settings to reduce potential issues with a user forgetting to click save. The user will see text at the top of the             Settings page explaining that all settings will automatically be displayed. This also adds protections on the back end to ensure we are always saving the most                   current user settings (proactively avoiding non-save errors).
 - [S10] User settings must be saved onto the Chrome extension’s local storage
