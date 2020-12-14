@@ -1,26 +1,53 @@
-.container {
+body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    padding: 1.5rem;
-}
-
-.background {
+    align-items: center;
     background-color: #f48d97;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
 }
 
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+#setting-note {
+    margin-bottom: 1.5em;
+}
+
+h2 {
+    margin-bottom: .5em;
+}
+
+#image-container {
+    display: flex;
+    justify-content: center;
+}
+
+#setting-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#setting-inner-container {
+    margin-left: 3em;
+}
+
 img {
     width: 100px;
     height: 80px;
+    margin-bottom: 2em;
 }
 
-#categories,
-#premade,
-#frequency,
-#custom-messages {
-    display: block;
-    margin: 2rem 7rem 4rem 7rem;
+#threshold-note {
+    margin-top: 1em;
+    width: 70%;
 }
 
 #add, #edit {

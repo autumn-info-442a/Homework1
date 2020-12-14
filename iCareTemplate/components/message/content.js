@@ -33,7 +33,7 @@ function checkURL() {
             console.log('here is current video count: ', videoCount);
         }
         previousURL = currentURL;
-        if (videoCount === watchThreshold) {
+        if (videoCount == watchThreshold) {
             injectOverlay();
             hideVideoContainer();
             pauseVideo();
@@ -176,26 +176,7 @@ function generateOverlay(height) {
     logoImg.setAttribute('alt', 'icare-logo');
     logoContainer.append(logoImg);
 
-    let timerContainer = document.createElement('div');
-    timerContainer.setAttribute('id', 'timer-container');
-    let timerImg = document.createElement('img');
-    timerImg.setAttribute('id', 'timer-img');
-    timerImg.setAttribute('src', chrome.runtime.getURL('components/assets/icons8-timer-48.png'));
-    timerImg.setAttribute('alt', 'timer-icon');
-
-    let timerCount = document.createElement('p');
-    timerCount.setAttribute('id', 'timer-count');
-
-    let timerUnit = document.createElement('p');
-    timerUnit.setAttribute('id', 'timer-unit');
-    timerUnit.innerHTML = 's';
-
-    timerContainer.append(timerImg);
-    timerContainer.append(timerCount);
-    timerContainer.append(timerUnit);
-
     iconsContainer.append(logoContainer);
-    iconsContainer.append(timerContainer);
 
     // header
     let header = document.createElement('header');
@@ -219,10 +200,31 @@ function generateOverlay(height) {
     button.setAttribute('class', 'disabled');
     button.setAttribute('type', 'button');
     button.setAttribute('disabled', '');
-    button.innerHTML = 'Close';
+
+    let buttonInnerText = document.createElement('p');
+    buttonInnerText.setAttribute('id', 'button-text');
+    buttonInnerText.innerHTML = "Close";
+
+    let timerLeftParenthesis = document.createElement('p');
+    timerLeftParenthesis.setAttribute('id', 'timer-left-parenthesis');
+    timerLeftParenthesis.innerHTML = "(";
+
+    let timerCount = document.createElement('p');
+    timerCount.setAttribute('id', 'timer-count');
+
+    let timerRightParenthesisAndUnit = document.createElement('p');
+    timerRightParenthesisAndUnit.setAttribute('id', 'timer-right-parenthesis-unit');
+    timerRightParenthesisAndUnit.innerHTML = "s )";
+
     button.addEventListener('click', () => {
         removeOverlayAndShowVideo();
-    })
+    });
+    
+    button.append(buttonInnerText);
+    button.append(timerLeftParenthesis);
+    button.append(timerCount);
+    button.append(timerRightParenthesisAndUnit);
+
     buttonContainer.append(button);
 
     overlayContainer.append(iconsContainer);

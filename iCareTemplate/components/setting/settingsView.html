@@ -5,73 +5,88 @@
 
     <meta charset="UTF-8">
     <script src="settingsController.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" 
+      rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel="stylesheet" href="settingsView.css">
-  </head>
-  <body class="background">
-    <header class="container">
-        <img src="../assets/iCare_Logo_1_small.png" alt="Logo">
-        <h1>Settings</h1>
+    </head>
+  <body>
+    <header>
+        <div id="image-container">
+          <img src="../assets/logo.png" alt="Logo">
+        </div>
+        <h1>iCare Settings</h1>
     </header>
 
-    <main class="container">
-      <div>
-        <div id="categories">
-          <h2>Set Message Categories</h2>
-          <div>
-              <input type="checkbox" id="exercise" value="exercise">
-              <label for="exercise">Exercise</label>
+    <main id="setting-container">
+      <h3 id="setting-note">
+        All settings will be saved automatically
+      </h3>
+      <div id="setting-inner-container" class="container">
+        <div class="row mb-5 w-100">
+            <div id="categories" class="col">
+              <h2>Set Message Categories</h2>
+              <div>
+                  <input type="checkbox" id="exercise" value="exercise">
+                  <label for="exercise">Exercise</label>
+                </div>
+              <div>
+                <input type="checkbox" id="motivational" value="motivational">
+                <label for="motivational">Motivational</label>
+              </div>
+              <div>
+                <input type="checkbox" id="screentime" value="screentime">
+                <label for="screentime">Screen Time</label>
+              </div>
+              <div>
+                <input type="checkbox" id="custom" value="custom">
+                <label for="custom">Custom Messages</label>
+              </div>
             </div>
-          <div>
-            <input type="checkbox" id="motivational" value="motivational">
-            <label for="motivational">Motivational</label>
-          </div>
-          <div>
-            <input type="checkbox" id="screentime" value="screentime">
-            <label for="screentime">Screen Time</label>
-          </div>
-          <div>
-            <input type="checkbox" id="custom" value="custom">
-            <label for="custom">Custom Messages</label>
+
+          <div id="premade" class="col">
+            <h2>Pre-made Messages</h2>
+            <table id="premade_table">
+              <thead>
+                <tr>
+                  <th>Message</th>
+                  <th>Show?</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
           </div>
         </div>
-        <div id="frequency">
-          <h2>Message Frequency</h2>
-          <select name="threshold" id="threshold">
-            <option value="" disabled selected hidden># of Videos</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-          </select>
-        </div>
-      </div>
-      <div>
-        <div id="premade">
-          <h2>Pre-made Messages</h2>
-          <table id="premade_table">
-            <thead>
-              <tr>
-                <th>Message</th>
-                <th>Show?</th>
-              </tr>
-            </thead>
-            <tbody></tbody>
-          </table>
-        </div>
-        <div id="custom-messages">
-          <h2>Custom Messages</h2>
-          <input placeholder="Custom Message" type="text" id="new_message" name="new_message">
-          <button id="add">Add</button>
-          <!-- <input type="button" onclick="addMessage()" id="add"> -->
-          <table id="custom_table">
-              <!-- s will be added using JS with class "custom_message" -->
-              <tbody>
-                
-              </tbody>
-          </table>
-          <input class="edit_hidden" placeholder="Edit Message" type="text" id="edit_message" name="edit_message">
-          <button class="edit_hidden" id="edit">Edit</button>
+
+        <div class="row w-100">
+          <div id="frequency" class="col">
+            <h2>Message Frequency</h2>
+            <select name="threshold" id="threshold">
+              <option value="" disabled selected hidden># of Videos</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+            <p id="threshold-note">
+              Your new frequency will goes on effect after the current frequecy count resets
+            </p>
+          </div>
+
+          <div id="custom-messages" class="col">
+            <h2>Custom Messages</h2>
+            <input placeholder="Custom Message" type="text" id="new_message" name="new_message">
+            <button id="add">Add</button>
+            <!-- <input type="button" onclick="addMessage()" id="add"> -->
+            <table id="custom_table">
+                <!-- s will be added using JS with class "custom_message" -->
+                <tbody>
+                  
+                </tbody>
+            </table>
+            <input class="edit_hidden" placeholder="Edit Message" type="text" id="edit_message" name="edit_message">
+            <button class="edit_hidden" id="edit">Edit</button>
+          </div>
         </div>
       </div>
     </main>
