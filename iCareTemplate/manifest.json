@@ -1,0 +1,28 @@
+{
+    "name" : "iCare",
+    "version": "1.0.0",
+    "manifest_version": 2,
+    "description": "An extention for moderating teen Youtube usage.",
+    "content_scripts": [
+        {
+            "matches": ["*://www.youtubekids.com/*"],
+            "js": ["./components/message/content.js"],
+            "css": ["./components/message/messageView.css"]
+        }
+    ], 
+    "background": {
+        "scripts": ["./components/monitor/background.js"],
+        "persistent": false
+    },
+    "browser_action": {
+        "default_title": "iCare",
+        "default_icon": "./components/assets/iCare_Logo_1_small.png",
+        "default_popup": "./components/pop-up/popup.html"
+    },
+    "permissions": ["activeTab", "storage"],
+    "options_page": "./components/setting/settingsView.html",
+    "web_accessible_resources": [
+        "components/assets/logo.png",
+        "components/assets/icons8-timer-48.png"
+        ]
+}
