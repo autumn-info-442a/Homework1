@@ -7,7 +7,9 @@
 - [G4] **COMPLETE** The font displayed will be in Arial
 
 ## Extension Pop-up [E]
-- [E1] **COMPLETE** Extension icon displays in the extension toolbar on the top right corner of the browser
+- [E1] ~~Extension icon displays in the extension toolbar on the top right corner of the browser~~
+- [E1] **REVISED** Extension icon is accessible in the extension toolbar on the top right corner of the browser
+       _Justification_: Users are able to customize/hide extensions in the toolbar so we have no way of forcing the icon to actually display. Instead, this requirement is fulfilled if the user can access the iCare extension from the main Chrome extension menu.
 - [E2] **COMPLETE** Extension icon must match the iCare logo
 - [E3] **COMPLETE** Left-clicking extension icon on the extension toolbar must open the extension’s popup window 
 - [E4] **COMPLETE** Extension popup must display a welcome message
