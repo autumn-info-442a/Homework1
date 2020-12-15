@@ -1,6 +1,6 @@
 console.log("Youtube Kid activated");
 
-const TIMER = 5;
+const TIMER = 15;
 
 let currentMessage = '';
 let watchThreshold = 5; 

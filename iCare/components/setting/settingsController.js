@@ -47,7 +47,7 @@
             return;
         }
         chrome.storage.local.get("custom", function(result) {
-            if (result.custom.length > 15) {
+            if (result.custom.length >= 15) {
                 alert("Cannot add more than 15 messages!");
                 return;
             }
