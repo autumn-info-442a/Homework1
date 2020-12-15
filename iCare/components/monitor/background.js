@@ -99,9 +99,19 @@ function setInitialSettings() {
         status: true
       }
     ]
-  }});
+  }}, function() {
+      getRandomMessage().then(function(result) {
+      messageResult = result;
+      console.log("initializing random message");
+    });
+  });
   chrome.storage.local.set({"custom": []});
-  chrome.storage.local.set({"threshold" : 3});
+  chrome.storage.local.set({"threshold" : 3}, function() {
+      getThreshold().then(function(result) {
+      threshold = result;
+      console.log("initializing threshold");
+    });
+  });
 }
   
 // matched url pattern: https://www.youtubekids.com/watch?v=sLuSq2RL9X0
